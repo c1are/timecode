@@ -1,0 +1,126 @@
+<html>
+  <head>
+   <title>TV part duration calculator</title>
+   	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    
+  </head>
+  <body>
+    <div id="calcWrapper">
+    <div id="calcWrapper_forShadow">
+      <div id="calcHolderTop">
+      	<h1>part duration calculator</h1>
+
+      </div>
+      <div id="helpLabel">
+          <a href="#">help</a>         
+      </div>
+       <div id="templateLabel">
+          <a href="#">templates</a>         
+      </div>
+      <div id="TargetOptions">
+          <p>What's your target duration?</p>
+          <form class="TCTarget">
+          <input id="hourTarget" type="text" onkeyup="compute()"  placeholder="hr" maxlength="2">:
+                <input id="minTarget" type="text" onkeyup="compute()"placeholder="min" maxlength="2">:
+                <input id="secTarget" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
+                <input id="frTarget" type="text" onkeyup="compute()"placeholder="fr" maxlength="2">
+          </form>
+      </div>
+   
+        <div id="calcHolderMid">
+        	<div class="section">
+            <div class="partName">
+            	 Part 1  
+           </div>
+              <form class="TC">
+                <input id="hour1" type="text" onkeyup="compute()"  placeholder="hr" maxlength="2">:
+            		<input id="min1" type="text" onkeyup="compute()"placeholder="min" maxlength="2">:
+            		<input id="sec1" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
+            		<input id="fr1" type="text" onkeyup="compute()"placeholder="fr" maxlength="2">
+              </form>
+          </div>
+
+          <div class="section">
+            <div class="partName">
+        	   Part 2 
+            </div>
+              <form class="TC">
+                <input id="hour2" type="text" onkeyup="compute()" placeholder="hr" maxlength="2">:
+            		<input id="min2" type="text" onkeyup="compute()" placeholder="min" maxlength="2">:
+            		<input id="sec2" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
+            		<input id="fr2" type="text" onkeyup="compute()" placeholder="fr" maxlength="2">             				
+            	</form>
+            </div>
+
+               <div class="section">
+            <div class="partName">
+             Part 3 
+            </div>
+              <form class="TC">
+                <input id="hour3" type="text" onkeyup="compute()" placeholder="hr" maxlength="2">:
+                <input id="min3" type="text" onkeyup="compute()" placeholder="min" maxlength="2">:
+                <input id="sec3" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
+                <input id="fr3" type="text" onkeyup="compute()" placeholder="fr" maxlength="2">                     
+              </form>
+            </div>
+
+               <div class="section">
+            <div class="partName">
+             Part 4 
+            </div>
+              <form class="TC">
+                <input id="hour4" type="text" onkeyup="compute()" placeholder="hr" maxlength="2">:
+                <input id="min4" type="text" onkeyup="compute()" placeholder="min" maxlength="2">:
+                <input id="sec4" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
+                <input id="fr4" type="text" onkeyup="compute()" placeholder="fr" maxlength="2">                     
+              </form>
+            </div>
+          </div>
+<!--
+        <button id="addPartButton">+ add another part</button>
+      </div> -->
+
+
+      <div id="calHolderBottom">
+        <div id="totalContainer">
+          <div class="partName">
+            Total 
+          </div>      	
+        	<form id="total">          
+            <input id="totalHr" type="text" size="3" maxlength="2">:
+        		<input id="totalMin" type="text" size="3" maxlength="2">:
+        		<input id="totalSec" type="text" size="3" maxlength="2">:
+        		<input id="totalFr" type="text" size="3" maxlength="2">
+        	</form>
+          
+            <ul id="timecodeText">
+              <li>hr</li>
+              <li>min</li>
+              <li>sec</li>
+              <li>frame</li>
+            </ul>            
+         </div> 
+          <div id="overUnderBy">
+          </div>
+          <form id="totalDiff">          
+            <input id="diffHr" type="text" size="3" maxlength="2">:
+            <input id="diffMin" type="text" size="3" maxlength="2">:
+            <input id="diffSec" type="text" size="3" maxlength="2">:
+            <input id="diffFr" type="text" size="3" maxlength="2">
+          </form>
+          
+        </div>
+    
+  </div>
+  </div>
+  <!--
+  <div id="footer">
+  </div>
+          -->
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js_script1.js"></script>  
+
+  <body>
+</html>

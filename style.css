@@ -1,0 +1,316 @@
+body {
+  font-family: Helvetica, sans-serif;
+  background: url('assets/retro3-bkg.jpg') repeat right top;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#calcWrapper{
+  display: block;
+  width: 250px;
+  padding: 20px;
+}
+
+#calcWrapper_forShadow{
+  border-radius: 15px;
+  box-shadow: 10px 10px 70px rgba(0,0,0,0.5);
+  z-index: 10;
+
+}
+
+#calcHolderTop{
+  display: block;
+  background: #E6E6E6;
+  border-radius: 15px 15px 0px 0px;
+  padding: 10px 0px;  
+  margin: 0px;
+  text-align: left;
+  box-shadow: inset 3px 3px 10px rgba(0,0,0,0.2), inset -8px 0px 10px -5px rgba(0,0,0,0.2);
+  border-bottom: 1px solid #cccccc;
+}
+
+#TargetOptions{
+  display: inline block;
+  background: #F7F7F7; 
+  padding: 10px 0px;
+  margin: 0px;
+  box-shadow: inset 15px 0px 15px -10px rgba(0,0,0,0.2), 
+              inset -8px 0px 15px -5px rgba(0,0,0,0.2);
+  border-bottom: 1px solid #cccccc;
+}
+
+#TargetOptions p {
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-style: italic;
+  font-size: 12px;
+  color: #333333;
+  padding: 0px 10px;
+}
+
+#calcHolderMid{
+  display: block;
+  background-color: white; 
+  padding: 10px 0px;  
+  margin: 0px;
+  box-shadow: inset 15px 0px 15px -10px rgba(0,0,0,0.2), 
+              inset -15px 0px 15px -10px rgba(0,0,0,0.2);
+
+}
+
+#calHolderBottom{
+  display: block;
+  background: #F7F7F7;
+  border-radius: 0px 0px 15px 15px; 
+  padding: 15px 0px;   
+  margin-top: 0px;
+  box-shadow: inset -5px -5px 15px rgba(0,0,0,0.2), 
+              inset 15px 0px 15px -10px rgba(0,0,0,0.2);
+  border-top: 1px solid #cccccc;
+}
+
+
+#calcHolderTop h1{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #333333;
+  padding-top: 5px;
+  font-family: Rockwell;
+}
+
+.TCTarget {
+  background: linear-gradient(#666666, #333333);       
+  padding: 0px;
+  border-radius: 55px;
+  border: 1px solid #CCCCCC;    
+  margin: 0px 20px 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.TCTarget input {
+  background-color: rgba(0, 0, 0, 0);  
+  margin: 0px 4px;
+}
+
+.TCTarget input[type="text"] {
+  font-size: 14px;
+  padding: 0px;
+  text-align: center;
+  width: 30px;
+  height: 30px;  
+  border: none;
+  color: #66FF00;
+}
+
+.TCTarget input[type="text"]:focus,
+.TCTarget input[type="text"].focus {
+  border: solid 1px #FFCC00;
+  border-radius: 100%;
+  outline-width: 0;  
+}
+
+.TC {
+  background: #F5F5F5;       
+  padding: 0px;
+  border: 1px solid #cccccc;
+  border-radius: 55px;  
+  margin: 0px 20px 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.TC input {
+  background-color: rgba(0, 0, 0, 0);  
+  margin: 0px 4px;
+}
+
+.TC input[type="text"] {
+  font-size: 14px;
+  padding: 0px;
+  text-align: center;
+  width: 30px;
+  height: 30px;  
+  border: none;
+  color: #333333;
+}
+
+.TC input[type="text"]:focus,
+.TC input[type="text"].focus {
+  border: solid 1px #FFCC00;
+  border-radius: 100%;
+  outline-width: 0;  
+}
+
+::-webkit-input-placeholder {
+   color: #DEDEDE;
+   font-style: italic;
+   font-weight: lighter;
+}
+
+
+.partName {
+font-style: italic;
+font-size: 12px;
+color: #333333;
+margin-left: 27px;
+}
+
+
+
+#total {
+  background: linear-gradient(#FFCC66, #FFCC00);
+  position: relative;
+  border: 1px solid #999999;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  border-radius: 55px;
+}
+
+#total input {
+  background-color: rgba(0, 0, 0, 0);  
+  margin: 0px 4px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;  
+  border: none;
+}
+
+#total input[type="text"]:focus,
+#total input[type="text"].focus {
+  border: solid 1px #FFCC00;
+  border-radius: 100%;
+  outline-width: 0; 
+}
+
+#addPartButton {
+  border: 1px solid #999999;
+  border-radius: 25px;
+  padding: 5px;  
+  margin: 10px;
+  margin-left: 15px;
+  background: #cccccc;
+  color: #666666;
+}
+
+
+#addPartButton:focus{
+  border-radius: 25px;
+  outline-width: 0;
+  border: 1px solid #FFCC00;
+  
+}
+
+ul  {
+  list-style: none;  
+  font-size: 12px;
+  font-style: italic;
+  margin: 0px; 
+  padding: 0px;
+  text-align: center;
+  padding-left: 25px;
+}
+
+li {
+  display: inline;
+  padding-right: 30px;
+  color: #666666;
+}
+
+#totalHeader {
+  position: relative;
+  font-style: italic;
+  font-size: 12px;
+  color: #333333;
+  margin-left: 40px;
+}
+
+#overUnderBy{
+  padding: 20px 0px 10px 0px;
+}
+#overUnderBy p{
+  margin: 0;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #333333;
+  padding: 0px 10px;
+}
+
+#totalDiff {
+  
+  position: relative;
+  border: 1px solid #999999;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  border-radius: 55px;
+}
+
+#totalDiff input {
+  background-color: rgba(0, 0, 0, 0);  
+  margin: 0px 4px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;  
+  border: none;
+}
+
+#totalDiff input[type="text"]:focus,
+#totalDiff input[type="text"].focus {
+  border: solid 1px #FFCC00;
+  border-radius: 100%;
+  outline-width: 0; 
+}
+
+#helpLabel{
+  position: absolute;
+  left: 249px;
+  margin: 0px;
+  padding: 5px 20px;
+  background: #333333;
+  transform: rotate(90deg);
+  border-radius: 6px 6px 0 0;
+}
+
+#helpLabel a{
+  color: #999999;
+  text-decoration: none;
+}
+
+#helpLabel a:hover{
+  color: white;
+}
+
+#templateLabel{
+  position: absolute;
+  left: 230px;
+  top: 170px;
+  margin: 0px;
+  padding: 5px 20px;
+  background: #333333;
+  transform: rotate(90deg);
+  border-radius: 6px 6px 0 0;
+}
+
+#templateLabel a{
+  color: #999999;
+  text-decoration: none;
+}
+
+#templateLabel a:hover{
+  color: white;
+}
+
+
