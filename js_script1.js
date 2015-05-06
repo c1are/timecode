@@ -35,7 +35,13 @@ var totalSec = document.getElementById("totalSec");
 var totalFr = document.getElementById("totalFr");
 
 //add part (not currently in use)
-var addPart = document.getElementById("addPartButton");
+var refresh = document.getElementById("refresh");
+
+//frame rate variables
+var pal = 25;
+var NTSCdropFrame = 29.97;
+var NYSCnonDropFrame = 30;
+var film = 24;
 
 //making sure result is returned as a number and a string
 function getValue(input){

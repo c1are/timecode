@@ -8,7 +8,7 @@ body {
 }
 
 #calcWrapper{
-  display: block;
+  display: inline-block;
   width: 250px;
   padding: 20px;
 }
@@ -319,6 +319,20 @@ li {
 
 #helpLabel a:hover{
   color: white;
+}
+
+#helpBox{
+  display: inline-block;
+  vertical-align: top;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  width: 250px;
+  padding: 10px;
+  position: relative;
+  margin: 20px;
+  border-radius: 15px;
+  font-size: 12px;
+  top: 46px;
 }
 
 #templateLabel{
