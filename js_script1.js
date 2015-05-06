@@ -129,6 +129,10 @@ function compute(){
 
     //UNDER (- orange)
     if(targetTC < totalDur){
+      diffHr.style.color = "orange";
+      diffMin.style.color = "orange";
+      diffSec.style.color = "orange";
+      diffFr.style.color = "orange";
       setValue(diffHr, diffOfTotalAndTargetArray[0]);
       setValue(diffMin, diffOfTotalAndTargetArray[1]);
       setValue(diffSec, diffOfTotalAndTargetArray[2]);
@@ -137,6 +141,10 @@ function compute(){
     //OVER (- red)    
     }else if(targetTC  > totalDur){
       diffOfTotalAndTarget = (targetTC - totalDur);
+      diffHr.style.color = "red";
+      diffMin.style.color = "red";
+      diffSec.style.color = "red";
+      diffFr.style.color = "red";
       setValue(diffHr, diffOfTotalAndTargetArray[0]);
       setValue(diffMin, diffOfTotalAndTargetArray[1]);
       setValue(diffSec, diffOfTotalAndTargetArray[2]);
@@ -144,6 +152,10 @@ function compute(){
 
     //Target is reached (green)
     }else{
+      diffHr.style.color = "#66FF00";
+      diffMin.style.color = "#66FF00";
+      diffSec.style.color = "#66FF00";
+      diffFr.style.color = "#66FF00";
       setValue(diffHr, totalArray[0]);
       setValue(diffMin, totalArray[1]);
       setValue(diffSec, totalArray[2]);

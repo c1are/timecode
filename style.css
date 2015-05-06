@@ -246,7 +246,7 @@ li {
 }
 
 #totalDiff {  
-background: linear-gradient(#666666, #333333);       
+  background: linear-gradient(#666666, #333333);       
   padding: 0px;
   border-radius: 55px;
   border: 1px solid #CCCCCC;    
