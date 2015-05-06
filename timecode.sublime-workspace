@@ -1,0 +1,462 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fo",
+				"font-family"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"tot",
+				"totalArray"
+			],
+			[
+				"fr",
+				"framesToTimecode"
+			],
+			[
+				"diff",
+				"diffArray"
+			],
+			[
+				"random",
+				"random_position"
+			],
+			[
+				"coo",
+				"colors"
+			],
+			[
+				"color",
+				"color-code"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"out",
+				"outline-width"
+			],
+			[
+				"border",
+				"border-top"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"bl",
+				"black"
+			],
+			[
+				"f",
+				"font-style"
+			],
+			[
+				"footer",
+				"footer_menu"
+			],
+			[
+				"cc",
+				"cc0000"
+			],
+			[
+				"foot",
+				"footer_menu"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"rb",
+				"rgba()"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"span",
+				"spanElement"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"i",
+				"inline"
+			],
+			[
+				"top",
+				"top"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"colo",
+				"background-color"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"g",
+				"getElementById"
+			],
+			[
+				"fra",
+				"framesToTimecode"
+			],
+			[
+				"time",
+				"timecodeToFrames"
+			],
+			[
+				"hours",
+				"hours1"
+			],
+			[
+				"get",
+				"getValue"
+			],
+			[
+				"Com",
+				"computeSecondsTotal"
+			],
+			[
+				"tr",
+				"transform"
+			],
+			[
+				"bo",
+				"box-shadow"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"art",
+				"article-footer"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"pd",
+				"padding-right"
+			],
+			[
+				"t",
+				"text-align"
+			],
+			[
+				"st",
+				"list-style"
+			],
+			[
+				"fig",
+				"figure"
+			],
+			[
+				"w",
+				"write"
+			],
+			[
+				"do",
+				"doFirst"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"d",
+				"dashed"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"min",
+				"min-width"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"selected_items":
+		[
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/timecode/index.html",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/index.html",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/js_script1.js",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/style.css",
+		"/C/Users/Clare/Documents/CodeBar/jQuery tutorial/colour picker/index.html",
+		"/C/Users/Clare/Documents/CodeBar/jQuery tutorial/colour picker/style.css",
+		"/C/Users/Clare/Documents/CodeBar/jQuery tutorial/colour picker/script.js",
+		"/C/Users/Clare/Documents/CodeBar/jQuery tutorial/wish list/script.js",
+		"/C/Users/Clare/Documents/CodeBar/jQuery tutorial/index.html",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/footer source code/footer.css",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/jquery.js",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/footer source code/index.html",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/footer.css",
+		"/C/Users/Clare/Documents/CodeBar/jQuery tutorial/script.js",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/script.js",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/index.html",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/style.css",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/test.js",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/script.js",
+		"/C/Users/Clare/Documents/CodeBar/Beginning Javascript/london-script.js",
+		"/C/Users/Clare/Documents/CodeBar/Beginning Javascript/london.html",
+		"/C/Users/Clare/Documents/CodeBar/Beginning Javascript/rockPaperScissors.js",
+		"/C/Users/Clare/Documents/CodeBar/Beginning Javascript/loopsHomework.js",
+		"/C/Users/Clare/Documents/CodeBar/JavaScript_Introduction/index.html",
+		"/C/Users/Clare/Documents/CodeBar/JavaScript_Introduction/script.js",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/code templates/basic_index.html",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/code templates/style_reset.css",
+		"/C/Users/Clare/Documents/GitHub/codebar/index.html",
+		"/C/Users/Clare/Documents/GitHub/codebar/style.css",
+		"/C/Users/Clare/Documents/CodeBar/JavaScript_Introduction/gist0b674ec9d5ae9cb09704-f1f6955c8b18212c7e255f0b7516e8e36e096632.tar.gz",
+		"/C/Users/Clare/Documents/CodeBar/HTML tutorial 6/index.html",
+		"/C/Users/Clare/Documents/CodeBar/HTML tutorial 6/style.css",
+		"/C/Users/Clare/Documents/GitHub/codebar/HTML lesson 4/style.css",
+		"/C/Users/Clare/Documents/CodeBar/bootsrtap CSS test/index.html",
+		"/C/Users/Clare/Documents/CodeBar/CSS tutorial 1/example.html",
+		"/C/Users/Clare/Documents/CodeBar/bootsrtap CSS test/carousel.html",
+		"/C/Users/Clare/Documents/GitHub/codebar/.gitignore",
+		"/C/Users/Clare/Documents/CodeBar/tests/JavaScript/index.html",
+		"/C/Users/Clare/Documents/CodeBar/bootsrtap CSS test/read.html",
+		"/C/Users/Clare/Documents/CodeBar/bootsrtap CSS test/css/styles.css",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/STRIVER/code/Striver 1.0/index.html",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/STRIVER/code/Striver 1.0/style.css",
+		"/C/Users/Clare/Documents/CodeBar/HTML lesson 4/index.html",
+		"/C/Users/Clare/Documents/CodeBar/HTML lesson 4/style.css",
+		"/C/Users/Clare/Documents/CodeBar/HTML tutorial 1/index.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			")",
+			"diffSec",
+			"0px",
+			"onchange",
+			"id=\"",
+			"to",
+			"id=\"",
+			"1",
+			"*/",
+			"/*",
+			"1",
+			"video",
+			"<!DOCTYPE html>\n<html>\n<head>\n\n</head>\n<body>\n\n<script type=\"text/javascript\">\n\n	function funky () {\n		alert(\"Ouch!\");\n	}\n\n\n\n</script>\n\n\n</body>\n</html>",
+			"<li><a href =\"#\">Home</a></li>",
+			"	\n",
+			"list-style",
+			"wrapper"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 183.0,
+	"status_bar_visible": true
+}

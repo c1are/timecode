@@ -28,7 +28,7 @@ var min4 = document.getElementById("min4");
 var sec4 = document.getElementById("sec4");
 var fr4 = document.getElementById("fr4");
 
-// total display area
+// total form (yellow)
 var totalHr = document.getElementById("totalHr");
 var totalMin = document.getElementById("totalMin");
 var totalSec = document.getElementById("totalSec");
@@ -47,7 +47,7 @@ function getValue(input){
   }
 }
 
-//pushes the result into input form 
+//sets a number value into input form 
 function setValue(input, num){
   input.value = num;
 }
@@ -113,7 +113,7 @@ function compute(){
   //adds the totals of all parts (in frames) and returns result as an array
   var totalArray = framesToTimecode(tc1 + tc2 + tc3 + tc4); 
 
-  // subtracts the target timecode from the total duration (pts 1-4)
+  // subtracts the target timecode from the total duration (pts 1-4) !!not in use!!
   var diffArray = framesToTimecode(targetTC - (tc1 + tc2 + tc3 + tc4)); 
 
   //sets the value of the 'totalArray' elements into the (yellow) total form
@@ -122,39 +122,26 @@ function compute(){
   setValue(totalSec, totalArray[2]);
   setValue(totalFr, totalArray[3]);
 
-  //sets the value of the 'diffArray' elements into the (bottom) total form
-  setValue(diffHr, diffArray[0]);
-  setValue(diffMin, diffArray[1]);
-  setValue(diffSec, diffArray[2]);
-  setValue(diffFr, diffArray[3]);
-
-  //change this form to return the difference result as a string and array
+  //calculates if total duration is over/under and returns the difference
+function difference(num1, num2){  
+  var diffOfTotalAndTarget = Math.abs(totalDur - targetTC);
+  var diffOfTotalAndTargetArray = framesToTimecode(diffOfTotalAndTarget)
+  if(targetTC  < totalDur){
+    setValue(diff, "OVER by +" + diffOfTotalAndTargetArray.join(":"));
+  }else if(targetTC  > totalDur){
+    diffOfTotalAndTarget = (targetTC - totalDur);
+    setValue(diff, "UNDER by -" + diffOfTotalAndTargetArray.join(":"));    
+  }else{
+    setValue(diff,"BOOM target dur of "+ targetTC  +" is reached!");
+  }  
+}
+var totalDur = tc1 + tc2 + tc3 + tc4; 
+var targetTC ;
+difference(targetTC , totalDur);
 }
 
 $(document).ready(function(){
   $ ('#calcWrapper').draggable();
   $('#overUnderBy').prepend("<p>This is a string</p>");
 });
-
-
-/*
-
-function difference(num1, num2){  
-  if(targetDur < totalDur){
-    var diffOfTotalAndTarget = (totalDur - targetDur);
-    console.log("You are OVER by +" + diffOfTotalAndTarget);
-  }else if(targetDur > totalDur){
-    diffOfTotalAndTarget = (targetDur- totalDur);
-    console.log("You are UNDER by -" + diffOfTotalAndTarget);    
-  }else{
-    console.log("BOOM target dur of "+ targetDur +" is reached!");
-  }  
-}
-
-var targetDur = 20;
-var totalDur = 20;
-
-difference(targetDur, totalDur);
-
-*/
 
