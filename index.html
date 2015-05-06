@@ -26,6 +26,12 @@
                 <input id="secTarget" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
                 <input id="frTarget" type="text" onkeyup="compute()"placeholder="fr" maxlength="2">
           </form>
+          <select id="frameSelect">
+            <option value="25fps">25 fps (PAL)</option>
+            <option value="30fps">29.97 fps (NTSC drop frame)</option>
+            <option value="25fps">30 fps (NTSC non-drop frame)</option>
+            <option value="24fps">24 fps</option>
+          </select>          
       </div>
    
         <div id="calcHolderMid">
@@ -75,6 +81,7 @@
                 <input id="sec4" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
                 <input id="fr4" type="text" onkeyup="compute()" placeholder="fr" maxlength="2">                     
               </form>
+
             </div>
           </div>
 <!--
@@ -101,7 +108,8 @@
               <li>frame</li>
             </ul>            
          </div> 
-          <div id="overUnderBy">            
+          <div id="overUnderBy">    
+          <p></p>        
           </div>
           <form id="totalDiff">          
             <input id="diffHr" type="text" size="3" maxlength="2">:
@@ -110,6 +118,7 @@
             <input id="diffFr" type="text" size="3" maxlength="2">
           </form>
 
+          <button id="refresh"><img src="assets/refresh-icon.png"></button>
           
         </div>
     
