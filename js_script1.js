@@ -127,24 +127,26 @@ function compute(){
     var diffOfTotalAndTarget = Math.abs(totalDur - targetTC);
     var diffOfTotalAndTargetArray = framesToTimecode(diffOfTotalAndTarget)
 
-    //UNDER (- orange)
+    //OVER (- orange)
     if(targetTC < totalDur){
       diffHr.style.color = "orange";
       diffMin.style.color = "orange";
       diffSec.style.color = "orange";
       diffFr.style.color = "orange";
+      $('#overUnderBy').html("<p>You're <strong>OVER</strong></p>");
       setValue(diffHr, diffOfTotalAndTargetArray[0]);
       setValue(diffMin, diffOfTotalAndTargetArray[1]);
       setValue(diffSec, diffOfTotalAndTargetArray[2]);
       setValue(diffFr, diffOfTotalAndTargetArray[3]); 
 
-    //OVER (- red)    
+    //UNDER (- red)    
     }else if(targetTC  > totalDur){
       diffOfTotalAndTarget = (targetTC - totalDur);
-      diffHr.style.color = "red";
-      diffMin.style.color = "red";
-      diffSec.style.color = "red";
-      diffFr.style.color = "red";
+      diffHr.style.color = "#FF3333";
+      diffMin.style.color = "#FF3333";
+      diffSec.style.color = "#FF3333";
+      diffFr.style.color = "#FF3333";
+      $('#overUnderBy').html("<p>You're <strong>UNDER</strong></p>");
       setValue(diffHr, diffOfTotalAndTargetArray[0]);
       setValue(diffMin, diffOfTotalAndTargetArray[1]);
       setValue(diffSec, diffOfTotalAndTargetArray[2]);
@@ -156,6 +158,7 @@ function compute(){
       diffMin.style.color = "#66FF00";
       diffSec.style.color = "#66FF00";
       diffFr.style.color = "#66FF00";
+      $('#overUnderBy').html("<p><strong>SPOT ON</strong> :-)</p>");
       setValue(diffHr, totalArray[0]);
       setValue(diffMin, totalArray[1]);
       setValue(diffSec, totalArray[2]);
@@ -170,6 +173,6 @@ function compute(){
 //jQuery
 $(document).ready(function(){
   $ ('#calcWrapper').draggable();
-  $('#overUnderBy').prepend("<p>This is a string</p>");
+  
 });
 

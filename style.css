@@ -167,8 +167,8 @@ margin-left: 27px;
   background: linear-gradient(#FFCC66, #FFCC00);
   position: relative;
   border: 1px solid #999999;
-  width: 90%;
-  margin: auto;
+  
+  margin: 0px 20px 10px;
   text-align: center;
   border-radius: 55px;
 }
@@ -180,8 +180,8 @@ margin-left: 27px;
   font-size: 18px;
   text-align: center;
   border-radius: 100%;
-  width: 40px;
-  height: 40px;  
+  width: 30px;
+  height: 30px;  
   border: none;
 }
 
