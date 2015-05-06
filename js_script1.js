@@ -123,23 +123,39 @@ function compute(){
   setValue(totalFr, totalArray[3]);
 
   //calculates if total duration is over/under and returns the difference
-function difference(num1, num2){  
-  var diffOfTotalAndTarget = Math.abs(totalDur - targetTC);
-  var diffOfTotalAndTargetArray = framesToTimecode(diffOfTotalAndTarget)
-  if(targetTC  < totalDur){
-    setValue(diff, "OVER by +" + diffOfTotalAndTargetArray.join(":"));
-  }else if(targetTC  > totalDur){
-    diffOfTotalAndTarget = (targetTC - totalDur);
-    setValue(diff, "UNDER by -" + diffOfTotalAndTargetArray.join(":"));    
-  }else{
-    setValue(diff,"BOOM target dur of "+ targetTC  +" is reached!");
-  }  
-}
-var totalDur = tc1 + tc2 + tc3 + tc4; 
-var targetTC ;
-difference(targetTC , totalDur);
+  function difference(num1, num2){  
+    var diffOfTotalAndTarget = Math.abs(totalDur - targetTC);
+    var diffOfTotalAndTargetArray = framesToTimecode(diffOfTotalAndTarget)
+
+    //UNDER (- orange)
+    if(targetTC < totalDur){
+      setValue(diffHr, diffOfTotalAndTargetArray[0]);
+      setValue(diffMin, diffOfTotalAndTargetArray[1]);
+      setValue(diffSec, diffOfTotalAndTargetArray[2]);
+      setValue(diffFr, diffOfTotalAndTargetArray[3]); 
+
+    //OVER (- red)    
+    }else if(targetTC  > totalDur){
+      diffOfTotalAndTarget = (targetTC - totalDur);
+      setValue(diffHr, diffOfTotalAndTargetArray[0]);
+      setValue(diffMin, diffOfTotalAndTargetArray[1]);
+      setValue(diffSec, diffOfTotalAndTargetArray[2]);
+      setValue(diffFr, diffOfTotalAndTargetArray[3]);     
+
+    //Target is reached (green)
+    }else{
+      setValue(diffHr, totalArray[0]);
+      setValue(diffMin, totalArray[1]);
+      setValue(diffSec, totalArray[2]);
+      setValue(diffFr, totalArray[3]); 
+    }  
+  }
+  var totalDur = tc1 + tc2 + tc3 + tc4; 
+  var targetTC ;
+  difference(targetTC , totalDur);
 }
 
+//jQuery
 $(document).ready(function(){
   $ ('#calcWrapper').draggable();
   $('#overUnderBy').prepend("<p>This is a string</p>");
