@@ -179,6 +179,8 @@ function compute(){
 //jQuery
 $(document).ready(function(){
   $ ('#calcWrapper').draggable();
+  $ ('#tabsWrapper_help').draggable();
+
   
 });
 

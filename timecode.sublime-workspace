@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"marg",
+				"margin"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
 				"fo",
 				"font-family"
 			],
@@ -36,32 +64,8 @@
 				"color-code"
 			],
 			[
-				"bor",
-				"border-bottom"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"marg",
-				"margin-bottom"
-			],
-			[
-				"padd",
-				"padding-top"
-			],
-			[
-				"margin",
-				"margin-left"
-			],
-			[
 				"out",
 				"outline-width"
-			],
-			[
-				"border",
-				"border-top"
 			],
 			[
 				"pa",
@@ -142,10 +146,6 @@
 			[
 				"span",
 				"spanElement"
-			],
-			[
-				"in",
-				"inline"
 			],
 			[
 				"i",
@@ -275,6 +275,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5964,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js_script1.js",
+			"settings":
+			{
+				"buffer_size": 5983,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 6426,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -300,6 +324,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/timecode/assets/refresh-icon.png",
 		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/timecode/index.html",
 		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/index.html",
 		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/js_script1.js",
@@ -362,6 +387,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"label",
+			"4",
+			"FF0000",
+			"red",
+			"\"red\"",
+			"\"orange\"",
+			"orange",
+			"diffOfTotalAndTargetArray",
+			"green",
+			"diffArray",
+			"total",
+			"diffOfTotalAndTargetArray",
+			"targetDur",
 			")",
 			"diffSec",
 			"0px",
@@ -396,8 +434,94 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 5964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4951,
+								4951
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2168.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js_script1.js",
+					"settings":
+					{
+						"buffer_size": 5983,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1482,
+								1482
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 213.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 6426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5435,
+								5430
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4060.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -5,12 +5,14 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  position: fixed;
 }
 
 #calcWrapper{
   display: inline-block;
   width: 250px;
   padding: 20px 0px 20px 20px;
+  z-index: 5;
 }
 
 #calcWrapper_forShadow{
@@ -22,23 +24,29 @@ body {
 
 #calcHolderTop{
   display: block;
-  background: #E6E6E6;
+  background: #E4E4E4;
   border-radius: 15px 15px 0px 0px;
-  padding: 10px 0px;  
+  padding: 15px 15px 5px;  
   margin: 0px;
-  text-align: left;
-  box-shadow: inset 3px 3px 10px rgba(0,0,0,0.2), inset -8px 0px 10px -5px rgba(0,0,0,0.2);
+  text-align: center;
+  box-shadow: inset 3px 3px 10px rgba(0,0,0,0.2),inset -8px 0px 10px -5px rgba(0,0,0,0.2);
   border-bottom: 1px solid #cccccc;
+  
+}
+
+#calcHolderTop img{
+  height: 25px;
 }
 
 #TargetOptions{
   display: inline block;
-  background: #F7F7F7; 
+  background: #f7f7f7; 
   padding: 10px 0px;
   margin: 0px;
   box-shadow: inset 15px 0px 15px -10px rgba(0,0,0,0.2), 
               inset -8px 0px 15px -5px rgba(0,0,0,0.2);
   border-bottom: 1px solid #cccccc;
+  border-top: 1px solid white;
 }
 
 #TargetOptions p {
@@ -58,6 +66,8 @@ body {
   margin: 0px;
   box-shadow: inset 15px 0px 15px -10px rgba(0,0,0,0.2), 
               inset -15px 0px 15px -10px rgba(0,0,0,0.2);
+  border-top: 1px solid white;
+  border-bottom: 1px solid #cccccc;
 
 }
 
@@ -69,7 +79,7 @@ body {
   margin-top: 0px;
   box-shadow: inset -5px -5px 15px rgba(0,0,0,0.2), 
               inset 15px 0px 15px -10px rgba(0,0,0,0.2);
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid white;
 }
 
 
@@ -283,10 +293,22 @@ li {
   margin-left: 100px;
   padding: 5px;
   box-shadow: 0 0 20px #666666;
+  outline: none;
+  border: 1px solid rgba(0,0,0,0);
 }
 
 #refresh img{
   height: 25px;  
+}
+
+#refresh:hover{
+border:1px solid #FFCC00;
+box-shadow: 0 0 10px #FFCC00;
+
+}
+#refresh:active{
+  border:1px solid #FF3333;
+  box-shadow: 0 0 10px #FF3333;
 }
 
 #frameSelect{
@@ -311,7 +333,12 @@ li {
   margin: 0;
   padding: 0;
   left: -245px;
-  z-index: -3;
+  z-index: 2;
+}
+
+.close img{
+  width: 25px;
+  float: right;
 }
 
 #helpLabel{
@@ -326,7 +353,7 @@ li {
   left: 209px;
 }
 
-#helpLabel a{
+#tabsWrapper_help a{
   color: #999999;
   text-decoration: none;
 }
@@ -349,13 +376,14 @@ li {
 
 #templateLabel{
   position: absolute;
-  left: 230px;
-  top: 170px;
+  left: 228px;
+  top: 200px;
   margin: 0px;
   padding: 5px 20px;
   background: #333333;
   transform: rotate(90deg);
   border-radius: 6px 6px 0 0;
+  z-index: 3;
 }
 
 #templateLabel a{
