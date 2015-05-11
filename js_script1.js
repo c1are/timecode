@@ -34,14 +34,12 @@ var totalMin = document.getElementById("totalMin");
 var totalSec = document.getElementById("totalSec");
 var totalFr = document.getElementById("totalFr");
 
-//add part (not currently in use)
+//???? do this in jQuery ????
 var refresh = document.getElementById("refresh");
 
-//frame rate variables
-var pal = 25;
-var NTSCdropFrame = 29.97;
-var NYSCnonDropFrame = 30;
-var film = 24;
+//???????????Get frame rate variables from select
+var frameSelect = document.getElementById("frameSelect");
+
 
 //making sure result is returned as a number and a string
 function getValue(input){
@@ -77,6 +75,9 @@ function framesToTimecode(totalFrames){
 } 
 
 function compute(){
+  // ??????????get frame rate choice 
+  var UserFrameChoice = frameSelect.options[frameSelect.selectedIndex].value;
+
   //get user target duration values 
   var ht = getValue(hourTarget);
   var mt = getValue(minTarget);
@@ -180,6 +181,11 @@ function compute(){
 $(document).ready(function(){
   $ ('#calcWrapper').draggable();
   $ ('#tabsWrapper_help').draggable();
+
+  //??? clear all values
+  $ ('#refresh').click(function(){
+    $('setValue').val("");
+  })
 
   
 });
