@@ -202,8 +202,12 @@ $(document).ready(function(){
   })  
   $ ('#helpBox').hide();
 
-  $ ('#helpLabel').on("click",function(){
+  $ ('#helpLabel').click(function(){
     $ ('#helpBox').show("drop", 500);
+  });
+
+  $ ('.close').click(function(){
+    $ ('#helpBox').hide("drop", 500);
   });
    
 });
