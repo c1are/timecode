@@ -34,7 +34,7 @@ var totalMin = document.getElementById("totalMin");
 var totalSec = document.getElementById("totalSec");
 var totalFr = document.getElementById("totalFr");
 
-//???? do this in jQuery ????
+// select refresh button
 var refresh = document.getElementById("refresh");
 
 //frame rate variables
@@ -76,7 +76,21 @@ function framesToTimecode(totalFrames){
 
 function compute(){
   // ??????????get frame rate choice 
-  var UserFrameChoice = frameSelect.options[frameSelect.selectedIndex].value;
+  function changeFrameRate(){
+  if (document.getElementById('frameSelect').value == '25'){
+    framesValue = 25;     
+  }
+if (document.getElementById('frameSelect').value == '29.97'){
+    framesValue = 29.97;    
+  }
+ if (document.getElementById('frameSelect').value == '30'){
+    framesValue = 30;     
+  }
+ if (document.getElementById('frameSelect').value == '24'){
+    framesValue = 24; 
+  }
+}
+  changeFrameRate();
 
   //get user target duration values 
   var ht = getValue(hourTarget);
