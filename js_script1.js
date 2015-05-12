@@ -194,9 +194,9 @@ if (document.getElementById('frameSelect').value == '29.97'){
 //jQuery
 $(document).ready(function(){
   $ ('#calcWrapper').draggable();
-  $ ('#tabsWrapper_help').draggable();
+  //$ ('#tabsWrapper_help').draggable();
 
-  //??? clear all values
+  // clear all values
   $ ('#refresh').on("click", function(){
     $('#hourTarget, #minTarget, #secTarget, #frTarget, #hour1, #hour2, #hour3, #hour4, #min1, #min2, #min3, #min4, #sec1, #sec2, #sec3, #sec4, #fr1, #fr2, #fr3, #fr4, #totalHr, #totalMin, #totalSec, #totalFr, #diffHr, #diffMin, #diffSec, #diffFr').val("");
   })  

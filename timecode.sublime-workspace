@@ -283,23 +283,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 6054,
+				"buffer_size": 6148,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js_script1.js",
-			"settings":
-			{
-				"buffer_size": 6467,
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 6876,
+				"buffer_size": 7037,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js_script1.js",
+			"settings":
+			{
+				"buffer_size": 6926,
 				"line_ending": "Windows"
 			}
 		}
@@ -440,7 +440,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -448,15 +448,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 6054,
+						"buffer_size": 6148,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								516,
-								506
+								5926,
+								5926
 							]
 						],
 						"settings":
@@ -466,54 +466,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2606.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "js_script1.js",
-					"settings":
-					{
-						"buffer_size": 6467,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6459,
-								6459
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2630.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 6876,
+						"buffer_size": 7037,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5178,
-								5178
+								6154,
+								6154
 							]
 						],
 						"settings":
@@ -524,7 +495,36 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3892.0,
+						"translation.y": 5474.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js_script1.js",
+					"settings":
+					{
+						"buffer_size": 6926,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6367,
+								6367
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3166.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
