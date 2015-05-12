@@ -20,7 +20,7 @@
                 <input id="secTarget" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
                 <input id="frTarget" type="text" onkeyup="compute()"placeholder="fr" maxlength="2">
           </form>
-          <select id="frameSelect">
+          <select id="frameSelect" name="frameSelect" onchange="compute()">
             <option value="25">25 fps (PAL)</option>
             <option value="29.97">29.97 fps (NTSC drop frame)</option>
             <option value="30">30 fps (NTSC non-drop frame)</option>
