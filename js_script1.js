@@ -58,19 +58,21 @@ function setValue(input, num){
 
 // converts timecode to frames (number number number number -> number)
 function timecodeToFrames(hours, mins, seconds, frames){
-  var convertHoursToFrames = hours * 60 * 60* 25;
-  var convertMinsToFrames = mins * 60 * 25;
-  var convertSecsToFrames = seconds * 25;
+  var convertHoursToFrames = hours * 60 * 60* framesValue;
+  var convertMinsToFrames = mins * 60 * framesValue;
+  var convertSecsToFrames = seconds * framesValue;
   return convertHoursToFrames + convertMinsToFrames + convertSecsToFrames + frames;
 }  
 
 
 // converts frames to a timecode and returns an array (number -> number number number number)
 function framesToTimecode(totalFrames){
-  var frames = totalFrames % 25;
-  var seconds = Math.floor(totalFrames / 25) % 60;
-  var minutes = Math.floor(totalFrames /60 / 25) % 60;
-  var hours = Math.floor(totalFrames / 60 / 60 / 25); 
+  var frames = Math.floor(totalFrames % framesValue);
+  totalFrames = totalFrames - frames;
+  var totalSeconds = totalFrames / framesValue;
+  var seconds = Math.floor(totalFrames / framesValue) % 60;
+  var minutes = Math.floor(totalFrames /60 / framesValue) % 60;
+  var hours = Math.floor(totalFrames / 60 / 60 / framesValue); 
   return [hours , minutes, seconds, frames];
 } 
 
@@ -209,6 +211,19 @@ $(document).ready(function(){
   $ ('.close').click(function(){
     $ ('#helpBox').hide("drop", 500);
   });
+
+  
    
+   function changeBkg(){
+    
+    var newImg = $('#bkgImgs').append("<div>");
+    newImg.css('z-index', "-4");
+    newImg.css('background', "url('assets/rainbow-bkg.jpg') no-repeat right top");
+
+
+    $('#bkgImgs div').first().css('transition', "opacity 1 ease-in-out");
+   };
+
+   setInterval(changeBkg, 5000);
 });
 

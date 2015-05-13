@@ -5,10 +5,17 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
+  background-color: black;
 }
 
-#bkgImgs{
+#bkgImgs div{
   background: url('assets/retro3-bkg.jpg') no-repeat right top;
+    z-index: -3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #calcWrapper{
@@ -341,11 +348,11 @@ box-shadow: 0 0 10px #FFCC00;
 
 .close img{
   width: 25px;
-  float: right;
+  float: right;  
 }
 
 #helpLabel{
-  position: relative;
+  position: absolute;
   margin: 0px;
   padding: 5px 20px;
   background: #333333;
@@ -370,12 +377,13 @@ box-shadow: 0 0 10px #FFCC00;
   vertical-align: top;
   background-color: rgba(0,0,0,0.5);
   color: white;
-  width: 200px;
-  padding: 10px 10px 10px 30px;
+  width: 300px;
+  padding: 10px 10px 10px 50px;
   position: relative;
-  border-radius: 0px 0px 15px 0px;
+  border-radius: 0px 15px 15px 0px;
   font-size: 12px;
-  left: 300px;
+  left: 240px;
+  z-index: -1;
 }
 
 #templateLabel{
