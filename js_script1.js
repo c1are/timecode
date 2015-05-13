@@ -193,6 +193,16 @@ if (document.getElementById('frameSelect').value == '29.97'){
   difference(targetTC , totalDur);
 }
 
+function cycleImages(){
+      var $active = $('#background_cycler .active');
+      var $next = ($('#background_cycler .active').next().length > 0) ? $('#background_cycler .active').next() : $('#background_cycler img:first');
+      $next.css('z-index',2);//move the next image up the pile
+    $active.fadeOut(1500,function(){//fade out the top image
+    $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+      $next.css('z-index',3).addClass('active');//make the next image the top one
+      });
+    }
+
 //jQuery
 $(document).ready(function(){
   $ ('#calcWrapper').draggable();
@@ -210,11 +220,16 @@ $(document).ready(function(){
 
   $ ('.close').click(function(){
     $ ('#helpBox').hide("drop", 500);
+
   });
+
+   $('#background_cycler').fadeIn(1500);//fade the background back in once all the images are loaded
+      // run every 7s
+      setInterval('cycleImages()', 7000);
 
   
    
-   function changeBkg(){
+   /*function changeBkg(){
     
     var newImg = $('#bkgImgs').append("<div>");
     newImg.css('z-index', "-4");
@@ -224,6 +239,12 @@ $(document).ready(function(){
     $('#bkgImgs div').first().css('transition', "opacity 1 ease-in-out");
    };
 
-   setInterval(changeBkg, 5000);
+   setInterval(changeBkg, 5000);*/
 });
+
+
+
+    $(window).load(function(){
+   
+    })
 
