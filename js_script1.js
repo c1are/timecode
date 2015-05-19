@@ -206,7 +206,6 @@ function cycleImages(){
 //jQuery
 $(document).ready(function(){
   $ ('#calcWrapper').draggable();
-  $ ('#tabsWrapper_help').draggable();
 
   //??? clear all values
   $ ('#refresh').on("click", function(){

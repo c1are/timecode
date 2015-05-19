@@ -58,6 +58,7 @@ p {
 
 #calcWrapper{
   display: inline-block;
+  position: relative;
   width: 250px;
   padding: 20px 0px 20px 20px;
   z-index: 5;
@@ -78,8 +79,7 @@ p {
   margin: 0px;
   text-align: center;
   box-shadow: inset 3px 3px 10px rgba(0,0,0,0.2),inset -8px 0px 10px -5px rgba(0,0,0,0.2);
-  border-bottom: 1px solid #cccccc;
-  
+  border-bottom: 1px solid #cccccc;  
 }
 
 #calcHolderTop img{
@@ -372,16 +372,13 @@ box-shadow: 0 0 10px #FFCC00;
     cursor:pointer;
 }
 
-#tabsWrapper_help{
-  display: inline-block;
-  vertical-align: top;
-  width: 280px;
-  position: relative;
-  top: 36px;
+#tabsWrapper_help{ 
+  position: absolute;
+  left: 239px;
+  top: 150px;
   margin: 0;
-  padding: 0;
-  left: -245px;
-  z-index: 2;
+  padding: 0;    
+  z-index: -1;
 }
 
 .close img{
@@ -393,16 +390,14 @@ box-shadow: 0 0 10px #FFCC00;
   cursor: pointer;
 }
 
-#helpLabel{
-  position: absolute;
+#helpLabel{ 
   margin: 0px;
   padding: 5px 20px;
   background: #333333;
   transform: rotate(90deg);
   border-radius: 6px 6px 0 0;
   width: 50px;
-  top: 59px;
-  left: 209px;
+  
 }
 
 #tabsWrapper_help a{
@@ -416,22 +411,22 @@ box-shadow: 0 0 10px #FFCC00;
   
 #helpBox{
   display: inline-block;
-  vertical-align: top;
   background-color: rgba(0,0,0,0.5);
   color: white;
-  width: 300px;
-  padding: 10px 10px 10px 50px;
-  position: relative;
+  width: 200px;
+  padding: 10px 30px 10px 50px;  
   border-radius: 0px 15px 15px 0px;
   font-size: 12px;
-  left: 240px;
+  position: absolute;
+  left: 30px;
+  top: -84px;
   z-index: -1;
 }
 
 #templateLabel{
   position: absolute;
-  left: 228px;
-  top: 200px;
+  left: 230px;
+  top: 255px;
   margin: 0px;
   padding: 5px 20px;
   background: #333333;

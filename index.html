@@ -1,12 +1,12 @@
 <html>
   <head>
-   <title>TV part duration calculator</title>
+   <title>telly:tally | A tool for TV editors and edit producers to add part duratios. Timecode Calculator. </title>
    	<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="footer.css">
     
   </head>
   <body>
-
+    <!-- start of background code  -->
   <div id="background_cycler" >
 
   <script type="text/javascript">
@@ -17,16 +17,20 @@
   <img src="assets/bkg_template_size.jpg" />
   <img src="assets/retro-bkg.jpg" />  
   </div>
+    <!-- end of background code  -->
 
 
 
-  
-    <div id="calcWrapper">
+  <!-- main calc wrapper  -->
+  <div id="calcWrapper">
+
+  <!-- for logo  -->
     <div id="calcWrapper_forShadow">
-      <div id="calcHolderTop">
+      <div id="calcHolderTop">      
       	<img src="assets/logo test 1.png"/>       
       </div>
-      
+
+   <!-- for setting target duration and framerate   -->
       <div id="TargetOptions">
           <p>What's your target duration?</p>
           <form class="TCTarget">
@@ -42,7 +46,8 @@
             <option value="24">24 fps</option>
           </select>          
       </div>
-   
+
+      <!-- Part duration timecode inputs  -->   
         <div id="calcHolderMid">
         	<div class="section">
             <div class="partName">
@@ -92,12 +97,9 @@
               </form>
 
             </div>
-          </div>
-<!--
-        <button id="addPartButton">+ add another part</button>
-      </div> -->
+          </div>     
 
-
+      <!-- Totals section  -->
       <div id="calHolderBottom">
         <div id="totalContainer">
           <div class="partName">
@@ -127,18 +129,28 @@
             <input id="diffFr" type="text" size="3" maxlength="2">
           </form>
 
+
+          <!-- refresh button  -->
           <button id="refresh"><img src="assets/refresh-icon.png"></button>          
-        </div>    
-  </div>
-  </div>
+        </div> <!-- END of totals section  -->  
+  
+  
+
+  <!-- START help section  -->
   <div id="tabsWrapper_help">
+
+    <!-- help tab  -->
     <div id="helpLabel">
             <a href="#">help</a>         
-        </div>         
+        </div>     
+
+    <!-- help box & text  -->    
     <div id="helpBox">
+
       <script type="text/javascript">
       $('#helpBox').hide();//hide the box while the images load.
       </script>
+
         <h3>How to use Telly:Tally</h3>
         <h4>Set Target Duration</h4>
         <p>Put your target duration in the top section. Eg if you're cutting a one hour for Channel 4, it'll be 47'30" </p> 
@@ -151,16 +163,24 @@
         <h4>Totals</h4>
         <p>The yellow section will show your current total duration and the dark grey section at the bottom calculates how over/under you are from your target duration.</p>
         <p><em>Dont have a target duration?</em></br>Telly:Tally works just fine with out one.</p>
-      
+
+        <!-- close help window -->
         <div class="close">
           <img src="assets/close.png"/>
         </div>
-      </div>
+      </div><!-- END of #help box -->
+    </div><!-- END of 'help' section  -->
+
     </div>
     <div id="templateLabel">
             <a href="#">templates</a>         
     </div>
-  </div>
+
+  </div> <!-- END of #calcwrapper_forShadow div  -->
+  </div> <!-- END of main calcWrapper div  -->
+
+
+
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="jquery-ui.min.js"></script>
   <script type="text/javascript" src="js_script1.js"></script>  
