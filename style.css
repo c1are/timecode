@@ -8,26 +8,35 @@ body {
   background-color: black;
 }
 
+h4{
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 0px;
+}
+
 
 
 #background_cycler{
-  padding:0;
-  margin:0;
-  height: 100%;
-  width: 100%;
   position:fixed;
-  top:0;
-  left:0;
-  z-index:-1
+  top:-50%;
+  left:-50%;
+  height: 200%;
+  width: 200%;  
+  z-index:-1;
 }
 
 #background_cycler img{
-  position:absolute;
-  height: 100%;
-  left:0;
-  top:0;
-
-  z-index:1
+  position:absolute;  
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  z-index:1;
 }
 
 #background_cycler img.active{
@@ -380,6 +389,10 @@ box-shadow: 0 0 10px #FFCC00;
   float: right;  
 }
 
+.close img:hover{
+  cursor: pointer;
+}
+
 #helpLabel{
   position: absolute;
   margin: 0px;
@@ -398,9 +411,9 @@ box-shadow: 0 0 10px #FFCC00;
 }
 
 #helpLabel a:hover{
-  color: white;
-}
-
+    color: white;
+} 
+  
 #helpBox{
   display: inline-block;
   vertical-align: top;

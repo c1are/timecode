@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"tot",
+				"totalFrames"
+			],
+			[
 				"re",
 				"refresh"
 			],
@@ -50,10 +54,6 @@
 			[
 				"back",
 				"background-color"
-			],
-			[
-				"tot",
-				"totalArray"
 			],
 			[
 				"fr",
@@ -283,15 +283,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 6054,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js_script1.js",
-			"settings":
-			{
-				"buffer_size": 6467,
+				"buffer_size": 6440,
 				"line_ending": "Windows"
 			}
 		},
@@ -299,7 +291,15 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 6876,
+				"buffer_size": 7372,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js_script1.js",
+			"settings":
+			{
+				"buffer_size": 8165,
 				"line_ending": "Windows"
 			}
 		}
@@ -391,6 +391,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"right",
 			"25",
 			"z index",
 			"label",
@@ -431,7 +432,7 @@
 		"replace_history":
 		[
 		],
-		"reverse": false,
+		"reverse": true,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -440,7 +441,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -448,15 +449,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 6054,
+						"buffer_size": 6440,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								516,
-								506
+								241,
+								241
 							]
 						],
 						"settings":
@@ -473,47 +474,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "js_script1.js",
-					"settings":
-					{
-						"buffer_size": 6467,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6459,
-								6459
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2630.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 6876,
+						"buffer_size": 7372,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5178,
-								5178
+								243,
+								243
 							]
 						],
 						"settings":
@@ -524,7 +496,36 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3892.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js_script1.js",
+					"settings":
+					{
+						"buffer_size": 8165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7792,
+								7792
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3563.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -534,7 +535,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{
