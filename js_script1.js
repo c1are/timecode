@@ -205,12 +205,14 @@ function cycleImages(){
 
 //jQuery
 $(document).ready(function(){
-  $ ('#calcWrapper').draggable();
+  
 
-  //??? clear all values
+  //clear all values
   $ ('#refresh').on("click", function(){
-    $('#hourTarget, #minTarget, #secTarget, #frTarget, #hour1, #hour2, #hour3, #hour4, #min1, #min2, #min3, #min4, #sec1, #sec2, #sec3, #sec4, #fr1, #fr2, #fr3, #fr4, #totalHr, #totalMin, #totalSec, #totalFr, #diffHr, #diffMin, #diffSec, #diffFr').val("");
+    $('input,select').val("");
   })  
+
+  //helpbox animation
   $ ('#helpBox').hide();
 
   $ ('#helpLabel').click(function(){
@@ -222,28 +224,29 @@ $(document).ready(function(){
 
   });
 
-   $('#background_cycler').fadeIn(1500);//fade the background back in once all the images are loaded
+
+   //helpbox animation
+  $ ('#templateBox').hide();
+
+  $ ('#templateLabel').click(function(){
+    $ ('#templateBox').show("drop", 500);
+  });
+
+  $ ('#closeTemplate').click(function(){
+    $ ('#templateBox').hide("drop", 500);
+
+  });
+
+  if ($(window).width() > "550"){
+  $('#background_cycler').fadeIn(1500);//fade the background back in once all the images are loaded
       // run every 7s
       setInterval('cycleImages()', 7000);
+      $ ('#calcWrapper').draggable();
+  }
 
+ 
   
-   
-   /*function changeBkg(){
-    
-    var newImg = $('#bkgImgs').append("<div>");
-    newImg.css('z-index', "-4");
-    newImg.css('background', "url('assets/rainbow-bkg.jpg') no-repeat right top");
-
-
-    $('#bkgImgs div').first().css('transition', "opacity 1 ease-in-out");
-   };
-
-   setInterval(changeBkg, 5000);*/
 });
 
 
-
-    $(window).load(function(){
-   
-    })
 
