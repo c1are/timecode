@@ -4,16 +4,40 @@
 		"selected_items":
 		[
 			[
+				"padding",
+				"padding"
+			],
+			[
+				"help",
+				"helpBox"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"bl",
+				"inline-block"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"fo",
+				"focus"
+			],
+			[
 				"tot",
 				"totalFrames"
 			],
 			[
 				"re",
 				"refresh"
-			],
-			[
-				"border",
-				"border"
 			],
 			[
 				"out",
@@ -40,16 +64,8 @@
 				"inline-block"
 			],
 			[
-				"margin",
-				"margin"
-			],
-			[
 				"bor",
 				"border-radius"
-			],
-			[
-				"fo",
-				"font-family"
 			],
 			[
 				"back",
@@ -94,10 +110,6 @@
 			[
 				"al",
 				"text-align"
-			],
-			[
-				"bl",
-				"black"
 			],
 			[
 				"f",
@@ -212,20 +224,12 @@
 				"transform"
 			],
 			[
-				"bo",
-				"box-shadow"
-			],
-			[
 				"inl",
 				"inline-block"
 			],
 			[
 				"art",
 				"article-footer"
-			],
-			[
-				"padding",
-				"padding-left"
 			],
 			[
 				"v",
@@ -283,7 +287,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 6440,
+				"buffer_size": 7760,
 				"line_ending": "Windows"
 			}
 		},
@@ -291,7 +295,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 7372,
+				"buffer_size": 9463,
 				"line_ending": "Windows"
 			}
 		},
@@ -299,7 +303,7 @@
 			"file": "js_script1.js",
 			"settings":
 			{
-				"buffer_size": 8165,
+				"buffer_size": 7839,
 				"line_ending": "Windows"
 			}
 		}
@@ -391,6 +395,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"[type=\"text\"",
+			"text",
+			"90deg",
+			"500px",
+			"600px",
+			"value",
 			"right",
 			"25",
 			"z index",
@@ -441,7 +451,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -449,15 +459,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 6440,
+						"buffer_size": 7760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								241,
-								241
+								329,
+								329
 							]
 						],
 						"settings":
@@ -477,15 +487,15 @@
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 7372,
+						"buffer_size": 9463,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								243,
-								243
+								8956,
+								8956
 							]
 						],
 						"settings":
@@ -496,7 +506,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 7157.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -506,15 +516,15 @@
 					"file": "js_script1.js",
 					"settings":
 					{
-						"buffer_size": 8165,
+						"buffer_size": 7839,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7792,
-								7792
+								7821,
+								7821
 							]
 						],
 						"settings":
@@ -525,7 +535,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3563.0,
+						"translation.y": 3708.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

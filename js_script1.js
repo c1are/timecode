@@ -244,6 +244,10 @@ $(document).ready(function(){
       $ ('#calcWrapper').draggable();
   }
 
+   if ($(window).width() < "550"){
+  $('#input type="text"').attr('type', 'number');
+  }
+
  
   
 });
