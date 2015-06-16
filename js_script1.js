@@ -4,6 +4,8 @@ var minTarget = document.getElementById("minTarget");
 var secTarget = document.getElementById("secTarget");
 var frTarget = document.getElementById("frTarget");
 
+var frameSelect = document.getElementById('frameSelect');
+
 // user input for Part 1
 var hours1 = document.getElementById("hour1");
 var min1 = document.getElementById("min1");
@@ -55,6 +57,14 @@ function getValue(input){
 function setValue(input, num){
   input.value = num;
 }
+
+function setTargetValues(hrs,mins,secs,fr,frSelect){
+    setValue(hoursTarget, hrs);
+    setValue(minTarget, mins);
+    setValue(secTarget, secs); 
+    setValue(frTarget, fr);
+    setValue(frameSelect, frSelect); 
+  }
 
 // converts timecode to frames (number number number number -> number)
 function timecodeToFrames(hours, mins, seconds, frames){
@@ -203,6 +213,9 @@ function cycleImages(){
       });
     }
 
+
+
+
 //jQuery
 $(document).ready(function(){
   
@@ -212,30 +225,47 @@ $(document).ready(function(){
     $('input,select').val("");
   })  
 
-  //helpbox animation
-  $ ('#helpBox').hide();
-
+  //HELPbox animation
   $ ('#helpLabel').click(function(){
     $ ('#helpBox').show("drop", 500);
+    $(this).addClass('active');
+    $('#templateLabel, #aboutLabel').removeClass('active');
+    $ ('#templateBox, #aboutBox').hide("drop", 500);
   });
 
-  $ ('.close').click(function(){
-    $ ('#helpBox').hide("drop", 500);
 
-  });
-
-
-   //helpbox animation
-  $ ('#templateBox').hide();
-
+  //TEMPLATEbox animation
   $ ('#templateLabel').click(function(){
     $ ('#templateBox').show("drop", 500);
+    $(this).addClass('active');
+    $('#helpLabel, #aboutLabel').removeClass('active');
+    $ ('#helpBox, #aboutBox').hide("drop", 500)
   });
 
-  $ ('#closeTemplate').click(function(){
-    $ ('#templateBox').hide("drop", 500);
 
+  //ABOUTbox animation
+  $ ('#aboutLabel').click(function(){
+    $ ('#aboutBox').show("drop", 500);
+    $(this).addClass('active');
+    $('#helpLabel, #templateLabel').removeClass('active');
+    $ ('#helpBox, #templateBox').hide("drop", 500);
   });
+
+
+  // ??changes border to yellow on channel images when active????
+  $ ('#channels').click(function(){
+    $(this).addClass('active');
+  });
+
+
+
+  //CLOSE tab
+  $ ('.close').click(function(){
+    $ ('#helpBox, #templateBox, #aboutBox').hide("drop", 500);
+    $('#helpLabel, #templateLabel, #aboutLabel').removeClass('active');
+  });
+  
+
 
   if ($(window).width() > "550"){
   $('#background_cycler').fadeIn(1500);//fade the background back in once all the images are loaded
@@ -244,13 +274,67 @@ $(document).ready(function(){
       $ ('#calcWrapper').draggable();
   }
 
-   if ($(window).width() < "550"){
-  $('#input type="text"').attr('type', 'number');
-  }
 
+
+  //lock screen to landscape on phone ** not sute if this works!
+  //screen.lockOrientation('portrait'); 
+
+
+  //channel selects 
+
+  $('.channel#itv').on('click', function(){
+    $('#durationSelect').html("<h3>ITV</h3>");
+    /*setTargetValues($(this).data('target-hour'), $(this).data('target-mins'), $(this).data('target-secs'),  $(this).data('target-mins'), $(this).data('target-fps') );  */
+    $('.SelectorSets').removeClass('setActive');
+    $('#SelectorsITV').addClass('setActive'); 
+  }); 
+
+  $('.channel#ch4').on('click', function(){
+    $('#durationSelect').html('<h3>CHANNEL 4</h3><p>All parts to be as even as possible </br>For further info on running times, visit <a href="http://www.channel4.com/media/documents/commissioning/PROGRAMME%20MANAGEMENT/PROGRAMMERUNNINGTIMES.pdf" target="_blank">channel4.com</a></p>'); 
+    /*setTargetValues($(this).data('target-hour'), $(this).data('target-mins'), $(this).data('target-secs'), $(this).data('target-frames'), $(this).data('target-fps')); */
+    $('.SelectorSets').removeClass('setActive');
+    $('#SelectorsCh4').addClass('setActive');    
+  });
+
+  $('.channel#ch5').on('click', function(){
+    $('#durationSelect').html("<h3>CHANNEL 5</h3>");   
+    /*setTargetValues($(this).data('target-hour'), $(this).data('target-mins'), $(this).data('target-secs'), $(this).data('target-frames'), $(this).data('target-fps')); */
+    $('.SelectorSets').removeClass('setActive');
+    $('#SelectorsCh5').addClass('setActive');
+  });
+
+  $('.channel#sky').on('click', function(){
+    $('#durationSelect').html("<h3>SKY (ONE, LIVING, ARTS, ATLANTIC)</h3>"); 
+    /*setTargetValues($(this).data('target-hour'), $(this).data('target-mins'), $(this).data('target-secs'), $(this).data('target-frames'), $(this).data('target-fps')); */
+    $('.SelectorSets').removeClass('setActive');
+    $('#SelectorsSky').addClass('setActive');
+  }); 
+   
  
   
-});
+}); //END of document.ready function
 
 
+
+     /* <ul class="progLengthSelect" >
+            <li><input type="radio" name="option" value="1"/>factual 30"</li>
+            <li><input type="radio" name="option" value="2"/>factual 40"</li>
+            <li><input type="radio" name="option" value="3"/>factual 45"</li>
+            <li><input type="radio" name="option" value="4"/>factual 55"</li>
+            <li><input type="radio" name="option" value="5"/>factual 60"</li>
+            <li><input type="radio" name="option" value="6"/>factual 70"</li>
+            <li><input type="radio" name="option" value="7"/>factual 75"</li>
+            <li><input type="radio" name="option" value="7"/>factual 90"</li> 
+            <li><input type="radio" name="option" value="7"/>factual 110"</li> 
+            <li><input type="radio" name="option" value="7"/>factual 120"</li>  
+            <li><input type="radio" name="option" value="7"/>factual 135"</li>
+            <li><input type="radio" name="option" value="7"/>factual 150"</li>
+            <li><input type="radio" name="option" value="7"/>non-factual 60"</li>
+            <li><input type="radio" name="option" value="7"/>non-factual 70"</li>
+            <li><input type="radio" name="option" value="7"/>daytime #1</li> 
+            <li><input type="radio" name="option" value="7"/>daytime #2</li>
+            <li><input type="radio" name="option" value="7"/>daytime #3</li> 
+            <li><input type="radio" name="option" value="7"/>sport 30"</li>    
+            <li><input type="radio" name="option" value="7"/>sport 60"</li>     
+          </ul> */
 

@@ -1,10 +1,21 @@
 <html>
   <head>
    <title>telly:tally | A tool for TV editors and edit producers to add part duratios. Timecode Calculator. </title>
-   	<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
+   	<link rel="stylesheet" type="text/css" href="style.css">    
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Analytics code 
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63462301-1', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
     
   </head>
   <body>
@@ -36,10 +47,10 @@
       <div id="TargetOptions">
           <p>What's your target duration?</p>
           <form class="TCTarget">
-          <input id="hourTarget" type="text" onkeyup="compute()"  placeholder="hr" maxlength="2">:
-                <input id="minTarget" type="text" onkeyup="compute()"placeholder="min" maxlength="2">:
-                <input id="secTarget" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
-                <input id="frTarget" type="text" onkeyup="compute()"placeholder="fr" maxlength="2">
+          <input id="hourTarget" type="tel" onkeyup="compute()"  placeholder="hr" maxlength="2">:
+                <input id="minTarget" type="tel" onkeyup="compute()"placeholder="min" maxlength="2">:
+                <input id="secTarget" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
+                <input id="frTarget" type="tel" onkeyup="compute()"placeholder="fr" maxlength="2">
           </form>
           <select id="frameSelect" name="frameSelect" onchange="compute()">
             <option value="25">25 fps (PAL)</option>
@@ -56,10 +67,10 @@
             	 Part 1  
            </div>
               <form class="TC">
-                <input id="hour1" type="text" onkeyup="compute()"  placeholder="hr" maxlength="2">:
-            		<input id="min1" type="text" onkeyup="compute()"placeholder="min" maxlength="2">:
-            		<input id="sec1" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
-            		<input id="fr1" type="text" onkeyup="compute()"placeholder="fr" maxlength="2">
+                <input id="hour1" type="tel" onkeyup="compute()"  placeholder="hr" maxlength="2">:
+            		<input id="min1" type="tel" onkeyup="compute()"placeholder="min" maxlength="2">:
+            		<input id="sec1" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
+            		<input id="fr1" type="tel" onkeyup="compute()"placeholder="fr" maxlength="2">
               </form>
           </div>
 
@@ -68,10 +79,10 @@
         	   Part 2 
             </div>
               <form class="TC">
-                <input id="hour2" type="text" onkeyup="compute()" placeholder="hr" maxlength="2">:
-            		<input id="min2" type="text" onkeyup="compute()" placeholder="min" maxlength="2">:
-            		<input id="sec2" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
-            		<input id="fr2" type="text" onkeyup="compute()" placeholder="fr" maxlength="2">             				
+                <input id="hour2" type="tel" onkeyup="compute()" placeholder="hr" maxlength="2">:
+            		<input id="min2" type="tel" onkeyup="compute()" placeholder="min" maxlength="2">:
+            		<input id="sec2" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
+            		<input id="fr2" type="tel" onkeyup="compute()" placeholder="fr" maxlength="2">             				
             	</form>
             </div>
 
@@ -80,10 +91,10 @@
              Part 3 
             </div>
               <form class="TC">
-                <input id="hour3" type="text" onkeyup="compute()" placeholder="hr" maxlength="2">:
-                <input id="min3" type="text" onkeyup="compute()" placeholder="min" maxlength="2">:
-                <input id="sec3" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
-                <input id="fr3" type="text" onkeyup="compute()" placeholder="fr" maxlength="2">                     
+                <input id="hour3" type="tel" onkeyup="compute()" placeholder="hr" maxlength="2">:
+                <input id="min3" type="tel" onkeyup="compute()" placeholder="min" maxlength="2">:
+                <input id="sec3" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
+                <input id="fr3" type="tel" onkeyup="compute()" placeholder="fr" maxlength="2">                     
               </form>
             </div>
 
@@ -92,13 +103,14 @@
              Part 4 
             </div>
               <form class="TC">
-                <input id="hour4" type="text" onkeyup="compute()" placeholder="hr" maxlength="2">:
-                <input id="min4" type="text" onkeyup="compute()" placeholder="min" maxlength="2">:
-                <input id="sec4" type="text" onkeyup="compute()" placeholder="sec" maxlength="2">:
-                <input id="fr4" type="text" onkeyup="compute()" placeholder="fr" maxlength="2">                     
+                <input id="hour4" type="tel" onkeyup="compute()" placeholder="hr" maxlength="2">:
+                <input id="min4" type="tel" onkeyup="compute()" placeholder="min" maxlength="2">:
+                <input id="sec4" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
+                <input id="fr4" type="tel" onkeyup="compute()" placeholder="fr" maxlength="2">                     
               </form>
 
             </div>
+            <button id="addPartBtn">+ another part</button>
           </div>     
 
       <!-- Totals section  -->
@@ -108,10 +120,10 @@
             Total 
           </div>      	
         	<form id="total">          
-            <input id="totalHr" type="text" size="3" maxlength="2">:
-        		<input id="totalMin" type="text" size="3" maxlength="2">:
-        		<input id="totalSec" type="text" size="3" maxlength="2">:
-        		<input id="totalFr" type="text" size="3" maxlength="2">
+            <input id="totalHr" type="text" size="3" maxlength="2" readonly>:
+        		<input id="totalMin" type="text" size="3" maxlength="2" readonly>:
+        		<input id="totalSec" type="text" size="3" maxlength="2" readonly>:
+        		<input id="totalFr" type="text" size="3" maxlength="2" readonly>
         	</form>
           
             <ul id="timecodeText">
@@ -125,10 +137,10 @@
           <p></p>        
           </div>
           <form id="totalDiff">          
-            <input id="diffHr" type="text" size="3" maxlength="2">:
-            <input id="diffMin" type="text" size="3" maxlength="2">:
-            <input id="diffSec" type="text" size="3" maxlength="2">:
-            <input id="diffFr" type="text" size="3" maxlength="2">
+            <input id="diffHr" type="text" size="3" maxlength="2" readonly>:
+            <input id="diffMin" type="text" size="3" maxlength="2" readonly>:
+            <input id="diffSec" type="text" size="3" maxlength="2" readonly>:
+            <input id="diffFr" type="text" size="3" maxlength="2" readonly>
           </form>
 
 
@@ -160,7 +172,7 @@
           <p>If you're working for a UK broadcaster, you will be working in PAL at 25 frames per second.</p>
 
         <h4>Add Part Durations</h4>
-        </p>Use the middle section to input each of your part durations.</p>
+        <p>Use the middle section to input each of your part durations (you can use the tab key to jump to the next box).</p>
 
         <h4>Totals</h4>
         <p>The yellow section will show your current total duration and the dark grey section at the bottom calculates how over/under you are from your target duration.</p>
@@ -181,30 +193,109 @@
     
 
     <div id="templateBox">
-      
-    <p>some text here</p>
-    <ul id="channels">
-      <li>li 1</li>
-      <li>li 2</li>
 
+    <ul id="channels">
+        <li>
+            <img class="channel" id="itv" src="assets/itv.png"/></li>
+            <!-- data-target-hour="03"
+              data-target-mins="33"
+              data-target-secs="30"
+              data-target-frames="00"
+              data-target-fps="25" -->
+        <li><img class="channel" id="ch4" src="assets/ch4.png"/></li>
+        <li><img class="channel" id="ch5" src="assets/ch5.png" /></li>
+        <li><img class="channel" id="sky" src="assets/sky.png"/></li>
     </ul>
 
+    <div id="durationSelect">   
+      <h3>Select a channel</h3>    
+    </div>
+
+      <div class="SelectorSets" id="SelectorsITV"> <!-- radio selectors for ITV  -->
+        <ul class="progLengthSelect" >
+          <li>coming soon!</li>
+        </ul>
+      </div>  
+        
+      <div class="SelectorSets" id="SelectorsCh4"> <!-- radio selectors for CH4  -->
+        <ul class="progLengthSelect" >          
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',23, 30, '00',25), compute()"/><label class="css-label" for="r1">factual 30"</label></li>
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',30, 30, '00',25), compute()"/>factual 40"</li>
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',36, '00', '00',25), compute()"/>factual 45"</li>
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',41, 30, '00',25), compute()"/>factual 55"</li>
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',47, '00', '00',25), compute()"/>factual 60"</li>
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',47, '00', '00',25), compute()"/>non-factual 60"</li>          
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',23, '00', '00',25), compute()"/>daytime 30"</li> 
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',35, '00', '00',25), compute()"/>daytime 40"</li>
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',44, 30, '00',25), compute()"/>daytime 60"</li> 
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',27, '00', '00',25), compute()"/>'Dispatches' 30"</li>
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',24, '00', '00',25), compute()"/>sport 30"</li>    
+          <li><input type="radio" class="css-checkbox" id="r1" name="option" onclick="setTargetValues('00',49, '00', '00',25), compute()"/>sport 60"</li>     
+        </ul>
+      </div>   
+
+      <div class="SelectorSets" id="SelectorsCh5"> <!-- radio selectors for CH5  -->
+        <ul class="progLengthSelect" >          
+          <li>coming soon!</li>
+        </ul>
+      </div> 
+
+      <div class="SelectorSets" id="SelectorsSky"> <!-- radio selectors for SKY  -->
+        <ul class="progLengthSelect" >
+          <li><input type="radio" name="option" onclick="setTargetValues('00',22, '00', '00',25), compute()"/>sky 30"</li>        
+          <li><input type="radio" name="option" onclick="setTargetValues('00',44, '00', '00',25), compute()"/>sky 60"</li>
+        </ul>
+      </div> 
      
-        <div class="close" id="closeTemplate">
+     
+    <div class="close" id="closeTemplate">
+        <img src="assets/close.png"/>
+    </div> 
+
+
+    </div><!-- END of #template box -->
+
+
+        <!-- START ABOUT section  -->
+  <div id="tabsWrapper_about">
+
+    <!-- help tab  -->
+    <div id="aboutLabel">
+            <a href="#">about</a>         
+        </div>     
+
+    <!-- ABOUT box & text  -->    
+    <div id="aboutBox">
+
+      <script type="text/javascript">
+      $('#aboutBox').hide();//hide the box while the images load.
+      </script>
+
+        <h3>About Telly:Tally</h3>
+        <p>This is a working prototype. It maybe a bit bumpy to start with! However I&#39m working hard to make <strong>TellyTally.com</strong> a smooth and useful tool for TV editors and edit producers. Please bear with. </p>
+
+        <p>If you&#39d like to provide some constructive feedback, you can contact me here - clarechildstv[at]hotmail[dot]com or <a href="https://twitter.com/clarechildstv" target="_blank">@clarechildstv</a></p>
+
+        <p>Telly:Tally is a test project I&#39ve been working on whilst learning to code at <a href="http://codebar.io/" target="_blank">Codebar</a> Brighton. </p>
+
+        <!-- close help window -->
+        <div class="close">
           <img src="assets/close.png"/>
-        </div> 
+        </div>
+      </div><!-- END of #ABOUT box -->
+    </div><!-- END of 'ABOUT' section  -->
 
 
-      </div><!-- END of #template box -->
   </div><!-- END of 'Templates' section  -->
-
-
-
 
 
 
   </div> <!-- END of #calcwrapper_forShadow div  -->
   </div> <!-- END of main calcWrapper div  -->
+
+  <footer>
+    <a href="https://twitter.com/telly_tally" target="_blank"><img src="assets/followusontwitterlogo.jpg" /></a>
+  </footer>
 
 
 

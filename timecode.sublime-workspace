@@ -4,16 +4,60 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-weight"
+			],
+			[
+				"bo",
+				"box-shadow"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"about",
+				"aboutLabel"
+			],
+			[
+				"ab",
+				"aboutLabel"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
 				"padding",
 				"padding"
 			],
 			[
 				"help",
 				"helpBox"
-			],
-			[
-				"bo",
-				"border-radius"
 			],
 			[
 				"border",
@@ -52,26 +96,6 @@
 				"margin"
 			],
 			[
-				"padd",
-				"padding"
-			],
-			[
-				"mar",
-				"margin"
-			],
-			[
-				"in",
-				"inline-block"
-			],
-			[
-				"bor",
-				"border-radius"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
 				"fr",
 				"framesToTimecode"
 			],
@@ -92,19 +116,7 @@
 				"color-code"
 			],
 			[
-				"pa",
-				"padding"
-			],
-			[
-				"text",
-				"text-decoration"
-			],
-			[
 				"font-s",
-				"font-size"
-			],
-			[
-				"font",
 				"font-size"
 			],
 			[
@@ -283,30 +295,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 7760,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "style.css",
-			"settings":
-			{
-				"buffer_size": 9463,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js_script1.js",
-			"settings":
-			{
-				"buffer_size": 7839,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -332,8 +320,14 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/timecode/assets/refresh-icon.png",
 		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/timecode/index.html",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/timecode/style.css",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/timecode/js_script1.js",
+		"/C/Users/Clare/Documents/CodeBar/HTTP Requests AJAX and APIs/Exercise 2 _ BBC's tomorrow's TV schedule/index.html",
+		"/C/Users/Clare/Documents/CodeBar/HTTP Requests AJAX and APIs/Exercise 2 _ BBC's tomorrow's TV schedule/script.js",
+		"/C/Users/Clare/Documents/CodeBar/HTTP Requests AJAX and APIs/Exercise 2 _ BBC's tomorrow's TV schedule/style.css",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/OnTheDouble/JS.js",
+		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/timecode/assets/refresh-icon.png",
 		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/index.html",
 		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/js_script1.js",
 		"/C/Users/Clare/Documents/WEBSITE ADMINS/TIMECODE CALCULATOR/TC calc v1.1/style.css",
@@ -395,6 +389,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"active",
+			"option",
+			"label",
+			"name=\"option2\"",
+			"label",
+			"helpL",
+			"box",
+			"ul",
+			"form",
+			"text",
+			"disp",
+			"hidd",
+			"non",
+			"text",
+			"*",
 			"[type=\"text\"",
 			"text",
 			"90deg",
@@ -451,95 +460,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 7760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								329,
-								329
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "style.css",
-					"settings":
-					{
-						"buffer_size": 9463,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8956,
-								8956
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7157.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js_script1.js",
-					"settings":
-					{
-						"buffer_size": 7839,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7821,
-								7821
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3708.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -599,6 +521,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 183.0,
+	"side_bar_width": 168.0,
 	"status_bar_visible": true
 }

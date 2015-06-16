@@ -4,10 +4,8 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #757575;
 }
-
-
 
 h4{
   margin-bottom: 0px;
@@ -17,8 +15,6 @@ p {
   margin-top: 0px;
 }
 
-
-
 #background_cycler{
   position:fixed;
   top:-50%;
@@ -26,6 +22,11 @@ p {
   height: 200%;
   width: 200%;  
   z-index:-1;
+}
+
+@media only screen and (max-width: 550px){
+  #background_cycler{display: none;
+  }
 }
 
 #background_cycler img{
@@ -92,11 +93,18 @@ p {
 #calcHolderTop{
   display: block;
   background: #E4E4E4;
-  padding: 15px 15px 5px;  
+  padding: 10px 5px;  
   margin: 0px;
   text-align: center;
   box-shadow: inset 3px 3px 10px rgba(0,0,0,0.2),inset -8px 0px 10px -5px rgba(0,0,0,0.2);
   border-bottom: 1px solid #cccccc;  
+}
+
+@media only screen and (max-width: 550px){
+#calcHolderTop{
+  text-align: left;
+  padding-left: 20px;
+}
 }
 
 #calcHolderTop img{
@@ -158,6 +166,7 @@ p {
   font-family: Rockwell;
 }
 
+
 .TCTarget {
   background: linear-gradient(#666666, #333333);       
   padding: 0px;
@@ -173,7 +182,7 @@ p {
   margin: 0px 4px;
 }
 
-.TCTarget input[type="text"] {
+.TCTarget input[type="tel"] {
   font-size: 14px;
   padding: 0px;
   text-align: center;
@@ -183,8 +192,8 @@ p {
   color: #66FF00;
 }
 
-.TCTarget input[type="text"]:focus,
-.TCTarget input[type="text"].focus {
+.TCTarget input[type="tel"]:focus,
+.TCTarget input[type="tel"].focus {
   border: solid 1px #FFCC00;
   border-radius: 100%;
   outline-width: 0;  
@@ -205,7 +214,7 @@ p {
   margin: 0px 4px;
 }
 
-.TC input[type="text"] {
+.TC input[type="tel"] {
   font-size: 14px;
   padding: 0px;
   text-align: center;
@@ -215,8 +224,8 @@ p {
   color: #333333;
 }
 
-.TC input[type="text"]:focus,
-.TC input[type="text"].focus {
+.TC input[type="tel"]:focus,
+.TC input[type="tel"].focus {
   border: solid 1px #FFCC00;
   border-radius: 100%;
   outline-width: 0;  
@@ -230,10 +239,10 @@ p {
 
 
 .partName {
-font-style: italic;
-font-size: 12px;
-color: #333333;
-margin-left: 27px;
+  font-style: italic;
+  font-size: 12px;
+  color: #333333;
+  margin-left: 27px;
 }
 
 
@@ -251,18 +260,16 @@ margin-left: 27px;
   background-color: rgba(0, 0, 0, 0);  
   margin: 0px 4px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
   border-radius: 100%;
-  width: 30px;
+  width: 35px;
   height: 30px;  
   border: none;
 }
 
 #total input[type="text"]:focus,
-#total input[type="text"].focus {
-  border: solid 1px #FFCC00;
-  border-radius: 100%;
+#total input[type="text"].focus {  
   outline-width: 0; 
 }
 
@@ -284,20 +291,21 @@ margin-left: 27px;
   
 }
 
-ul  {
-  list-style: none;  
-  font-size: 12px;
-  font-style: italic;
-  margin: 0px; 
+ul#timecodeText  {
+  list-style: none;   
+  margin-top: 0px; 
   padding: 0px;
   text-align: center;
   padding-left: 25px;
 }
 
-li {
+#timecodeText li {
   display: inline;
-  padding-right: 30px;
+  padding-right: 20px;
   color: #666666;
+  font-size: 12px;
+  font-style: italic;
+  margin: 0;
 }
 
 #totalHeader {
@@ -338,16 +346,14 @@ li {
   font-size: 14px;
   padding: 0px;
   text-align: center;
-  width: 30px;
+  width: 35px;
   height: 30px;  
   border: none;
   color: #66FF00;
-  }
+}
 
 #totalDiff input[type="text"]:focus,
-#totalDiff input[type="text"].focus {
-  border: solid 1px #FFCC00;
-  border-radius: 100%;
+#totalDiff input[type="text"].focus {  
   outline-width: 0; 
 }
 
@@ -359,7 +365,7 @@ li {
   box-shadow: 0 0 20px #666666;
   outline: none;
   border: 1px solid rgba(0,0,0,0);
-  display: block;
+  display: block;  
 }
 
 #refresh img{
@@ -369,24 +375,24 @@ li {
 #refresh:hover{
 border:1px solid #FFCC00;
 box-shadow: 0 0 10px #FFCC00;
-
 }
+
 #refresh:active{
   border:1px solid #FF3333;
   box-shadow: 0 0 10px #FF3333;
 }
 
 #frameSelect{
-    padding:3px;
-    margin: 0px 20px;
-    border-radius:30px;
-    background: white;
-    color:#888;
-    border: 1px solid #cccccc;
-    outline:none;
-    display: inline-block;
-    appearance:none;
-    cursor:pointer;
+  padding:3px;
+  margin: 0px 20px;
+  border-radius:30px;
+  background: white;
+  color:#888;
+  border: 1px solid #cccccc;
+  outline:none;
+  display: inline-block;
+  appearance:none;
+  cursor:pointer;
 }
 
 #tabsWrapper_help{ 
@@ -433,20 +439,26 @@ box-shadow: 0 0 10px #FFCC00;
   transform:         rotate(90deg);  
   border-radius: 6px 6px 0 0;
   width: 50px;  
+  z-index: 0;
 }
 
 @media only screen and (max-width: 550px){
-#helpLabel{
-  -webkit-transform: rotate(0deg);
-  -moz-transform:    rotate(0deg);
-  -ms-transform:     rotate(0deg);
-  -o-transform:      rotate(0deg);
-  transform:         rotate(0deg); 
-  border-radius: 0 6px 0 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+  #helpLabel{
+    -webkit-transform: rotate(0deg);
+    -moz-transform:    rotate(0deg);
+    -ms-transform:     rotate(0deg);
+    -o-transform:      rotate(0deg);
+    transform:         rotate(0deg); 
+    border-radius: 50px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    padding: 3px;
+    text-align: center;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#cccccc));
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
 }
 
 #tabsWrapper_help a{
@@ -454,12 +466,29 @@ box-shadow: 0 0 10px #FFCC00;
   text-decoration: none;
 }
 
+@media only screen and (max-width: 550px){
+  #tabsWrapper_help a {
+    color: #a6a6a6;
+  }
+}
+
 #helpLabel a:hover{
     color: white;
 } 
+
+#helpLabel.active a{
+  color: #FFCC66;
+}
+
+
+@media only screen and (max-width: 550px){
+  #helpLabel a:hover{
+    color: #3b3b3b;
+  } 
+}
   
 #helpBox{
-  display: block;
+  display: none;
   background-color: rgba(0,0,0,0.5);
   color: white;
   width: 200px;
@@ -469,7 +498,7 @@ box-shadow: 0 0 10px #FFCC00;
   position: absolute;
   left: 30px;
   top: -84px;
-  z-index: -1;
+  z-index: -2;
 }
 
 @media only screen and (max-width: 550px){
@@ -517,19 +546,19 @@ box-shadow: 0 0 10px #FFCC00;
 }
 
 @media only screen and (max-width: 550px){
-#templateLabel{
-  -webkit-transform: rotate(0deg);
-  -moz-transform:    rotate(0deg);
-  -ms-transform:     rotate(0deg);
-  -o-transform:      rotate(0deg);
-  transform:         rotate(0deg); 
-  border-radius: 6px 0 0 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-
-}
+  #templateLabel{
+    -webkit-transform: rotate(0deg);
+    -moz-transform:    rotate(0deg);
+    -ms-transform:     rotate(0deg);
+    -o-transform:      rotate(0deg);
+    transform:         rotate(0deg); 
+    border-radius: 6px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+  }
 }
 
 #templateLabel a{
@@ -541,8 +570,115 @@ box-shadow: 0 0 10px #FFCC00;
   color: white;
 }
 
+#templateLabel.active a{
+  color: #FFCC66;
+}
+
+
 #templateBox{
-  display: inline-block;
+  display: none;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10px 20px 10px 60px;  
+  border-radius: 0px 15px 15px 0px;
+  font-size: 12px;
+  position: absolute;
+  left: 30px;
+  top: -41px;
+  z-index: -2;
+  width: 358px;
+}
+
+ul#channels {
+  color: white;
+  z-index: 8;    
+  padding-left: 0;
+  display: inline;
+  margin-bottom: 0px;  
+}
+
+#channels li {
+  list-style: none;  
+  display: inline;  
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#channels li img {
+  width: 80px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-bottom: 0px;
+}
+
+#channels li img:hover {
+  border: 1px solid white; 
+}
+
+
+/*Need help to get the active state working!!!*/
+#channels li img.active a{
+  border: 1px solid #FFCC66; 
+}
+
+#durationSelect{    
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.5), rgba(0,0,0,0.0) );
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;  
+  margin-top: -3px;
+}
+
+
+.progLengthSelect li{
+  list-style: none;
+}
+
+ul.progLengthSelect {
+  -webkit-column-count: 3;
+  padding-left: 0px;
+}
+
+#tabsWrapper_about{
+  position: absolute;
+  left: 10px;
+  top: 110px;
+  margin: 0;
+  padding: 0;    
+  z-index: -2;
+}
+
+#aboutLabel{ 
+  margin: 0px;
+  padding: 5px 20px;
+  background: #333333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform:    rotate(90deg);
+  -ms-transform:     rotate(90deg);
+  -o-transform:      rotate(90deg);
+  transform:         rotate(90deg);  
+  border-radius: 6px 6px 0 0;
+  width: 50px;  
+}
+
+
+#tabsWrapper_about a{
+  color: #999999;
+  text-decoration: none;
+}
+
+#aboutLabel a:hover{
+    color: white;
+} 
+
+#aboutLabel.active a{
+  color: #FFCC66;
+}
+  
+#aboutBox{
+  display: none;
   background-color: rgba(0,0,0,0.5);
   color: white;
   width: 200px;
@@ -551,14 +687,47 @@ box-shadow: 0 0 10px #FFCC00;
   font-size: 12px;
   position: absolute;
   left: 30px;
-  top: -194px;
-  z-index: -2;
+  top: -304px;
+  z-index: -5;
 }
 
-#channels{
-  color: white;
-  z-index: 8;
-  list-style: none;
+
+footer img {
+  width: 120px;
+  position: fixed;
+  float: right;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 5px;
 }
+
+.SelectorSets{
+  display: none;
+}
+
+.setActive.SelectorSets{
+  display: block;
+}
+
+p a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px dotted white; 
+}
+
+#addPartBtn{    
+    position: relative;    
+    padding: 3px;
+    border-radius: 20px;
+    margin-left: 20px;
+    text-align: center;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#cccccc));
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* YELLOW or stronger #FFCC00S */
 
 
