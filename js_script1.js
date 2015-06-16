@@ -280,32 +280,28 @@ $(document).ready(function(){
   //screen.lockOrientation('portrait'); 
 
 
-  //channel selects 
+  //channel selects in templates tab
 
   $('.channel#itv').on('click', function(){
-    $('#durationSelect').html("<h3>ITV</h3>");
-    /*setTargetValues($(this).data('target-hour'), $(this).data('target-mins'), $(this).data('target-secs'),  $(this).data('target-mins'), $(this).data('target-fps') );  */
+    $('#durationSelect').html("<h3>ITV</h3>");    
     $('.SelectorSets').removeClass('setActive');
     $('#SelectorsITV').addClass('setActive'); 
   }); 
 
   $('.channel#ch4').on('click', function(){
-    $('#durationSelect').html('<h3>CHANNEL 4</h3><p>All parts to be as even as possible </br>For further info on running times, visit <a href="http://www.channel4.com/media/documents/commissioning/PROGRAMME%20MANAGEMENT/PROGRAMMERUNNINGTIMES.pdf" target="_blank">channel4.com</a></p>'); 
-    /*setTargetValues($(this).data('target-hour'), $(this).data('target-mins'), $(this).data('target-secs'), $(this).data('target-frames'), $(this).data('target-fps')); */
+    $('#durationSelect').html('<h3>CHANNEL 4</h3><p>All parts to be as even as possible </br>For further info on running times, visit <a href="http://www.channel4.com/media/documents/commissioning/PROGRAMME%20MANAGEMENT/PROGRAMMERUNNINGTIMES.pdf" target="_blank">channel4.com</a></p>');     
     $('.SelectorSets').removeClass('setActive');
     $('#SelectorsCh4').addClass('setActive');    
   });
 
   $('.channel#ch5').on('click', function(){
-    $('#durationSelect').html("<h3>CHANNEL 5</h3>");   
-    /*setTargetValues($(this).data('target-hour'), $(this).data('target-mins'), $(this).data('target-secs'), $(this).data('target-frames'), $(this).data('target-fps')); */
+    $('#durationSelect').html("<h3>CHANNEL 5</h3>");  
     $('.SelectorSets').removeClass('setActive');
     $('#SelectorsCh5').addClass('setActive');
   });
 
   $('.channel#sky').on('click', function(){
     $('#durationSelect').html("<h3>SKY (ONE, LIVING, ARTS, ATLANTIC)</h3>"); 
-    /*setTargetValues($(this).data('target-hour'), $(this).data('target-mins'), $(this).data('target-secs'), $(this).data('target-frames'), $(this).data('target-fps')); */
     $('.SelectorSets').removeClass('setActive');
     $('#SelectorsSky').addClass('setActive');
   }); 
