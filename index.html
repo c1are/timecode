@@ -22,9 +22,7 @@
     <!-- start of background code  -->
   <div id="background_cycler" >
 
-  <script type="text/javascript">
-  $('#background_cycler').hide();//hide the background while the images load, ready to fade in later
-  </script>
+
 
   <img class="active" src="assets/retro3-bkg.jpg" />
   <img src="assets/bkg_template_size.jpg" />
@@ -62,56 +60,12 @@
 
       <!-- Part duration timecode inputs  -->   
         <div id="calcHolderMid">
-        	<div class="section">
-            <div class="partName">
-            	 Part 1  
-           </div>
-              <form class="TC">
-                <input id="hour1" type="tel" onkeyup="compute()"  placeholder="hr" maxlength="2">:
-            		<input id="min1" type="tel" onkeyup="compute()"placeholder="min" maxlength="2">:
-            		<input id="sec1" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
-            		<input id="fr1" type="tel" onkeyup="compute()"placeholder="fr" maxlength="2">
-              </form>
+        
+            
+          </div>    
+          <div> 
+          <button id="addPartBtn">+ add part</button>
           </div>
-
-          <div class="section">
-            <div class="partName">
-        	   Part 2 
-            </div>
-              <form class="TC">
-                <input id="hour2" type="tel" onkeyup="compute()" placeholder="hr" maxlength="2">:
-            		<input id="min2" type="tel" onkeyup="compute()" placeholder="min" maxlength="2">:
-            		<input id="sec2" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
-            		<input id="fr2" type="tel" onkeyup="compute()" placeholder="fr" maxlength="2">             				
-            	</form>
-            </div>
-
-               <div class="section">
-            <div class="partName">
-             Part 3 
-            </div>
-              <form class="TC">
-                <input id="hour3" type="tel" onkeyup="compute()" placeholder="hr" maxlength="2">:
-                <input id="min3" type="tel" onkeyup="compute()" placeholder="min" maxlength="2">:
-                <input id="sec3" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
-                <input id="fr3" type="tel" onkeyup="compute()" placeholder="fr" maxlength="2">                     
-              </form>
-            </div>
-
-               <div class="section">
-            <div class="partName">
-             Part 4 
-            </div>
-              <form class="TC">
-                <input id="hour4" type="tel" onkeyup="compute()" placeholder="hr" maxlength="2">:
-                <input id="min4" type="tel" onkeyup="compute()" placeholder="min" maxlength="2">:
-                <input id="sec4" type="tel" onkeyup="compute()" placeholder="sec" maxlength="2">:
-                <input id="fr4" type="tel" onkeyup="compute()" placeholder="fr" maxlength="2">                     
-              </form>
-
-            </div>
-            <button id="addPartBtn">+ another part</button>
-          </div>     
 
       <!-- Totals section  -->
       <div id="calHolderBottom">
@@ -161,9 +115,6 @@
     <!-- help box & text  -->    
     <div id="helpBox">
 
-      <script type="text/javascript">
-      $('#helpBox').hide();//hide the box while the images load.
-      </script>
 
         <h3>How to use Telly:Tally</h3>
         <h4>Set Target Duration</h4>
@@ -267,9 +218,7 @@
     <!-- ABOUT box & text  -->    
     <div id="aboutBox">
 
-      <script type="text/javascript">
-      $('#aboutBox').hide();//hide the box while the images load.
-      </script>
+      
 
         <h3>About Telly:Tally</h3>
         <p>This is a working prototype. It maybe a bit bumpy to start with! However I&#39m working hard to make <strong>TellyTally.com</strong> a smooth and useful tool for TV editors and edit producers. Please bear with. </p>
@@ -302,6 +251,18 @@
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="jquery-ui.min.js"></script>
   <script type="text/javascript" src="js_script1.js"></script>  
+    <script type="text/javascript">
+  $('#background_cycler').hide();//hide the background while the images load, ready to fade in later
+  </script>
+
+
+      <script type="text/javascript">
+      $('#helpBox').hide();//hide the box while the images load.
+      </script>
+
+      <script type="text/javascript">
+      $('#aboutBox').hide();//hide the box while the images load.
+      </script>
 
   <body>
 </html>

@@ -1,3 +1,22 @@
+
+
+
+//making sure result is returned as a number and a string
+function getValue(input){
+  var result = parseInt(input.value, 10);
+  if (isNaN(result) ){
+    return 0;
+  } else {
+    return result;
+  }
+}
+
+function addValues(total, value){
+  return total + value;
+}
+
+
+
 // user input for target duration
 var hoursTarget = document.getElementById("hourTarget");
 var minTarget = document.getElementById("minTarget");
@@ -6,29 +25,29 @@ var frTarget = document.getElementById("frTarget");
 
 var frameSelect = document.getElementById('frameSelect');
 
-// user input for Part 1
-var hours1 = document.getElementById("hour1");
-var min1 = document.getElementById("min1");
-var sec1 = document.getElementById("sec1");
-var fr1 = document.getElementById("fr1");
+// // user input for Part 1
+// var hours1 = document.getElementById("hour1");
+// var min1 = document.getElementById("min1");
+// var sec1 = document.getElementById("sec1");
+// var fr1 = document.getElementById("fr1");
 
-// user input for Part 2
-var hours2 = document.getElementById("hour2");
-var min2 = document.getElementById("min2");
-var sec2 = document.getElementById("sec2");
-var fr2 = document.getElementById("fr2");
+// // user input for Part 2
+// var hours2 = document.getElementById("hour2");
+// var min2 = document.getElementById("min2");
+// var sec2 = document.getElementById("sec2");
+// var fr2 = document.getElementById("fr2");
 
-// user input for Part 3
-var hours3 = document.getElementById("hour3");
-var min3 = document.getElementById("min3");
-var sec3 = document.getElementById("sec3");
-var fr3 = document.getElementById("fr3");
+// // user input for Part 3
+// var hours3 = document.getElementById("hour3");
+// var min3 = document.getElementById("min3");
+// var sec3 = document.getElementById("sec3");
+// var fr3 = document.getElementById("fr3");
 
-// user input for Part 4
-var hours4 = document.getElementById("hour4");
-var min4 = document.getElementById("min4");
-var sec4 = document.getElementById("sec4");
-var fr4 = document.getElementById("fr4");
+// // user input for Part 4
+// var hours4 = document.getElementById("hour4");
+// var min4 = document.getElementById("min4");
+// var sec4 = document.getElementById("sec4");
+// var fr4 = document.getElementById("fr4");
 
 // total form (yellow)
 var totalHr = document.getElementById("totalHr");
@@ -43,15 +62,7 @@ var refresh = document.getElementById("refresh");
 var framesValue = 25;
 
 
-//making sure result is returned as a number and a string
-function getValue(input){
-  var result = parseInt(input.value, 10);
-  if (isNaN(result) ){
-  	return 0;
-  } else {
-    return result;
-  }
-}
+
 
 //sets a number value into input form 
 function setValue(input, num){
@@ -104,6 +115,23 @@ if (document.getElementById('frameSelect').value == '29.97'){
 }
   changeFrameRate();
 
+
+
+  var hourEls = $('.hours').toArray();
+  var minsEls = $('.mins').toArray();
+  var secsEls = $('.secs').toArray();
+  var framesEls = $('.frames').toArray();
+
+  var hourVals = hourEls.map(getValue);
+  var minsVals = minsEls.map(getValue);
+  var secsVals = secsEls.map(getValue);
+  var framesVals = framesEls.map(getValue);
+
+  var totalHours = hourVals.reduce(addValues, 0);
+  var totalMins = minsVals.reduce(addValues, 0);
+  var totalSecs = secsVals.reduce(addValues, 0);
+  var totalFrames = framesVals.reduce(addValues, 0);
+
   //get user target duration values 
   var ht = getValue(hourTarget);
   var mt = getValue(minTarget);
@@ -111,7 +139,7 @@ if (document.getElementById('frameSelect').value == '29.97'){
   var ft = getValue(frTarget);
 
   //get part 1 values
-  var h1 = getValue(hours1);
+ /* var h1 = getValue(hours1);
   var m1 = getValue(min1);
   var s1 = getValue(sec1);
   var f1 = getValue(fr1);
@@ -132,22 +160,26 @@ if (document.getElementById('frameSelect').value == '29.97'){
   var h4 = getValue(hours4);
   var m4 = getValue(min4);
   var s4 = getValue(sec4);
-  var f4 = getValue(fr4);
+  var f4 = getValue(fr4);*/
 
   //converts parts 1-4 from timecode to frames 
-  var tc1 = timecodeToFrames(h1, m1, s1, f1);
+ /* var tc1 = timecodeToFrames(h1, m1, s1, f1);
   var tc2 = timecodeToFrames(h2, m2, s2, f2); 
   var tc3 = timecodeToFrames(h3, m3, s3, f3); 
-  var tc4 = timecodeToFrames(h4, m4, s4, f4);
+  var tc4 = timecodeToFrames(h4, m4, s4, f4);*/
+
+  var totalFrames = timecodeToFrames(totalHours, totalMins, totalSecs, totalFrames);
 
   //converts target timecode into frames
-  var targetTC = timecodeToFrames(ht, mt, st, ft);
+  var targetFrames = timecodeToFrames(ht, mt, st, ft);
 
   //adds the totals of all parts (in frames) and returns result as an array
-  var totalArray = framesToTimecode(tc1 + tc2 + tc3 + tc4); 
+  /*var totalArray = framesToTimecode(tc1 + tc2 + tc3 + tc4); */
 
-  // subtracts the target timecode from the total duration (pts 1-4) !!not in use!!
-  var diffArray = framesToTimecode(targetTC - (tc1 + tc2 + tc3 + tc4)); 
+  // subtracts the target timecode from the total duration (pts 1-4) 
+  var totalArray = framesToTimecode(totalFrames);
+
+  var diffArray = framesToTimecode(targetFrames - totalFrames); 
 
   //sets the value of the 'totalArray' elements into the (yellow) total form
   setValue(totalHr, totalArray[0]);
@@ -156,12 +188,12 @@ if (document.getElementById('frameSelect').value == '29.97'){
   setValue(totalFr, totalArray[3]);
 
   //calculates if total duration is over/under and returns the difference
-  function difference(num1, num2){  
-    var diffOfTotalAndTarget = Math.abs(totalDur - targetTC);
+  function difference(){  
+    var diffOfTotalAndTarget = Math.abs(totalFrames - targetFrames);
     var diffOfTotalAndTargetArray = framesToTimecode(diffOfTotalAndTarget)
 
     //OVER (- orange)
-    if(targetTC < totalDur){
+    if(targetFrames < totalFrames){
       diffHr.style.color = "orange";
       diffMin.style.color = "orange";
       diffSec.style.color = "orange";
@@ -173,8 +205,8 @@ if (document.getElementById('frameSelect').value == '29.97'){
       setValue(diffFr, diffOfTotalAndTargetArray[3]); 
 
     //UNDER (- red)    
-    }else if(targetTC  > totalDur){
-      diffOfTotalAndTarget = (targetTC - totalDur);
+    }else if(targetFrames  > totalFrames){
+      diffOfTotalAndTarget = (targetFrames - totalFrames);
       diffHr.style.color = "#FF3333";
       diffMin.style.color = "#FF3333";
       diffSec.style.color = "#FF3333";
@@ -198,9 +230,9 @@ if (document.getElementById('frameSelect').value == '29.97'){
       setValue(diffFr, totalArray[3]); 
     }  
   }
-  var totalDur = tc1 + tc2 + tc3 + tc4; 
-  var targetTC ;
-  difference(targetTC , totalDur);
+  //var totalDur = tc1 + tc2 + tc3 + tc4; 
+  
+  difference();
 }
 
 function cycleImages(){
@@ -305,32 +337,79 @@ $(document).ready(function(){
     $('.SelectorSets').removeClass('setActive');
     $('#SelectorsSky').addClass('setActive');
   }); 
+
+  $('#addPartBtn').on('click', addPart);
+
+  addPart();
+  addPart();
    
  
   
 }); //END of document.ready function
 
 
+function createPart(partNumber){
+  // create the section element
+ var section = document.createElement("div");
+ section.className = "section";
 
-     /* <ul class="progLengthSelect" >
-            <li><input type="radio" name="option" value="1"/>factual 30"</li>
-            <li><input type="radio" name="option" value="2"/>factual 40"</li>
-            <li><input type="radio" name="option" value="3"/>factual 45"</li>
-            <li><input type="radio" name="option" value="4"/>factual 55"</li>
-            <li><input type="radio" name="option" value="5"/>factual 60"</li>
-            <li><input type="radio" name="option" value="6"/>factual 70"</li>
-            <li><input type="radio" name="option" value="7"/>factual 75"</li>
-            <li><input type="radio" name="option" value="7"/>factual 90"</li> 
-            <li><input type="radio" name="option" value="7"/>factual 110"</li> 
-            <li><input type="radio" name="option" value="7"/>factual 120"</li>  
-            <li><input type="radio" name="option" value="7"/>factual 135"</li>
-            <li><input type="radio" name="option" value="7"/>factual 150"</li>
-            <li><input type="radio" name="option" value="7"/>non-factual 60"</li>
-            <li><input type="radio" name="option" value="7"/>non-factual 70"</li>
-            <li><input type="radio" name="option" value="7"/>daytime #1</li> 
-            <li><input type="radio" name="option" value="7"/>daytime #2</li>
-            <li><input type="radio" name="option" value="7"/>daytime #3</li> 
-            <li><input type="radio" name="option" value="7"/>sport 30"</li>    
-            <li><input type="radio" name="option" value="7"/>sport 60"</li>     
-          </ul> */
+ // create the partName element
+ var partName = document.createElement("div");
+ partName.className = "partName";
+ partName.textContent = "Part " + partNumber;
+
+// Append the partName element to the section element.
+ section.appendChild(partName);
+
+ var form = document.createElement("form");
+ form.className = "TC";
+
+ // Listen for keyup events from the form (and elements within the form).
+ form.onkeyup = function(){
+  compute();
+ }
+
+ var inputHour = document.createElement("input");
+ inputHour.className = "hours";
+ inputHour.setAttribute("type", "tel");
+ inputHour.setAttribute("placeholder", "hr");
+ inputHour.setAttribute("maxlength", "2");
+
+ var inputMinutes = document.createElement("input");
+ inputMinutes.className = "mins";
+ inputMinutes.setAttribute("type", "tel");
+ inputMinutes.setAttribute("placeholder", "hr");
+ inputMinutes.setAttribute("maxlength", "2");
+ 
+ var inputSeconds = document.createElement("input");
+ inputSeconds.className = "secs";
+ inputSeconds.setAttribute("type", "tel");
+ inputSeconds.setAttribute("placeholder", "hr");
+ inputSeconds.setAttribute("maxlength", "2");
+ 
+ var inputFrames = document.createElement("input");
+ inputFrames.className = "frames";
+ inputFrames.setAttribute("type", "tel");
+ inputFrames.setAttribute("placeholder", "hr");
+ inputFrames.setAttribute("maxlength", "2");
+
+ form.appendChild(inputHour);
+ form.appendChild(inputMinutes);
+ form.appendChild(inputSeconds);
+ form.appendChild(inputFrames);
+
+ // Append the form to the setion.
+ section.appendChild(form);
+
+ // Return the completed section.
+ return section;
+}
+
+function addPart(){
+  var container = document.getElementById("calcHolderMid");
+  var numParts = container.children.length;
+  var part = createPart(numParts + 1);
+  container.appendChild(part);
+}
+
 
